@@ -16,6 +16,9 @@
 		44DAB0E5282A910700156A9B /* TrangueellAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0E4282A910700156A9B /* TrangueellAppTests.swift */; };
 		44DAB0EF282A910700156A9B /* TrangueellAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0EE282A910700156A9B /* TrangueellAppUITests.swift */; };
 		44DAB0F1282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */; };
+		44DAB0FF282AA17400156A9B /* Dream+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */; };
+		44DAB100282AA17400156A9B /* Dream+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */; };
+		44DAB102282AB8C100156A9B /* ModalSetting1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB101282AB8C100156A9B /* ModalSetting1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		44DAB0EA282A910700156A9B /* TrangueellAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrangueellAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DAB0EE282A910700156A9B /* TrangueellAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppUITests.swift; sourceTree = "<group>"; };
 		44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dream+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dream+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44DAB101282AB8C100156A9B /* ModalSetting1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSetting1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,8 @@
 		44DAB0C2282A910400156A9B = {
 			isa = PBXGroup;
 			children = (
+				44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */,
+				44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */,
 				44DAB0CD282A910400156A9B /* TrangueellApp */,
 				44DAB0E3282A910700156A9B /* TrangueellAppTests */,
 				44DAB0ED282A910700156A9B /* TrangueellAppUITests */,
@@ -100,6 +108,7 @@
 			children = (
 				44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */,
 				44DAB0D0282A910400156A9B /* ContentView.swift */,
+				44DAB101282AB8C100156A9B /* ModalSetting1.swift */,
 				44DAB0D2282A910700156A9B /* Assets.xcassets */,
 				44DAB0D7282A910700156A9B /* Persistence.swift */,
 				44DAB0D9282A910700156A9B /* TrangueellApp.xcdatamodeld */,
@@ -264,8 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				44DAB0D8282A910700156A9B /* Persistence.swift in Sources */,
+				44DAB100282AA17400156A9B /* Dream+CoreDataProperties.swift in Sources */,
 				44DAB0D1282A910400156A9B /* ContentView.swift in Sources */,
+				44DAB102282AB8C100156A9B /* ModalSetting1.swift in Sources */,
 				44DAB0DB282A910700156A9B /* TrangueellApp.xcdatamodeld in Sources */,
+				44DAB0FF282AA17400156A9B /* Dream+CoreDataClass.swift in Sources */,
 				44DAB0CF282A910400156A9B /* TrangueellAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

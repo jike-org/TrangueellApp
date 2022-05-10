@@ -10,20 +10,21 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var showModal = false
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Dream.dreamTitle, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var dreams: FetchedResults<Dream>
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
+                ForEach(dreams) { dream in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        Text("Dream at \(dream.dreamTitle!)")
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        Text(dream.dreamTitle!)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -33,9 +34,13 @@ struct ContentView: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button {
+                        self.showModal.toggle()
+                    } label: {
                         Label("Add Item", systemImage: "plus")
-                    }
+                    }.sheet(isPresented: $showModal){
+                        ModalSetting1(showModal: self.$showModal)
+                }
                 }
             }
             Text("Select an item")
@@ -44,8 +49,8 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newDream = Dream(context: viewContext)
+            newDream.dreamTitle = "Banana o nana"
 
             do {
                 try viewContext.save()
@@ -60,7 +65,7 @@ struct ContentView: View {
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { dreams[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
