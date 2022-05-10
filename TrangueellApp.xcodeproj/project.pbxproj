@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44DAB0CF282A910400156A9B /* TrangueellAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */; };
+		44DAB0D1282A910400156A9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0D0282A910400156A9B /* ContentView.swift */; };
+		44DAB0D3282A910700156A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DAB0D2282A910700156A9B /* Assets.xcassets */; };
+		44DAB0D6282A910700156A9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DAB0D5282A910700156A9B /* Preview Assets.xcassets */; };
+		44DAB0D8282A910700156A9B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0D7282A910700156A9B /* Persistence.swift */; };
+		44DAB0DB282A910700156A9B /* TrangueellApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0D9282A910700156A9B /* TrangueellApp.xcdatamodeld */; };
+		44DAB0E5282A910700156A9B /* TrangueellAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0E4282A910700156A9B /* TrangueellAppTests.swift */; };
+		44DAB0EF282A910700156A9B /* TrangueellAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0EE282A910700156A9B /* TrangueellAppUITests.swift */; };
+		44DAB0F1282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44DAB0E1282A910700156A9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DAB0C3282A910400156A9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44DAB0CA282A910400156A9B;
+			remoteInfo = TrangueellApp;
+		};
+		44DAB0EB282A910700156A9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DAB0C3282A910400156A9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44DAB0CA282A910400156A9B;
+			remoteInfo = TrangueellApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		44DAB0CB282A910400156A9B /* TrangueellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrangueellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppApp.swift; sourceTree = "<group>"; };
+		44DAB0D0282A910400156A9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		44DAB0D2282A910700156A9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44DAB0D5282A910700156A9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		44DAB0D7282A910700156A9B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		44DAB0DA282A910700156A9B /* TrangueellApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrangueellApp.xcdatamodel; sourceTree = "<group>"; };
+		44DAB0E0282A910700156A9B /* TrangueellAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrangueellAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DAB0E4282A910700156A9B /* TrangueellAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppTests.swift; sourceTree = "<group>"; };
+		44DAB0EA282A910700156A9B /* TrangueellAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrangueellAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DAB0EE282A910700156A9B /* TrangueellAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppUITests.swift; sourceTree = "<group>"; };
+		44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44DAB0C8282A910400156A9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DAB0DD282A910700156A9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DAB0E7282A910700156A9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44DAB0C2282A910400156A9B = {
+			isa = PBXGroup;
+			children = (
+				44DAB0CD282A910400156A9B /* TrangueellApp */,
+				44DAB0E3282A910700156A9B /* TrangueellAppTests */,
+				44DAB0ED282A910700156A9B /* TrangueellAppUITests */,
+				44DAB0CC282A910400156A9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44DAB0CC282A910400156A9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44DAB0CB282A910400156A9B /* TrangueellApp.app */,
+				44DAB0E0282A910700156A9B /* TrangueellAppTests.xctest */,
+				44DAB0EA282A910700156A9B /* TrangueellAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44DAB0CD282A910400156A9B /* TrangueellApp */ = {
+			isa = PBXGroup;
+			children = (
+				44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */,
+				44DAB0D0282A910400156A9B /* ContentView.swift */,
+				44DAB0D2282A910700156A9B /* Assets.xcassets */,
+				44DAB0D7282A910700156A9B /* Persistence.swift */,
+				44DAB0D9282A910700156A9B /* TrangueellApp.xcdatamodeld */,
+				44DAB0D4282A910700156A9B /* Preview Content */,
+			);
+			path = TrangueellApp;
+			sourceTree = "<group>";
+		};
+		44DAB0D4282A910700156A9B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				44DAB0D5282A910700156A9B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		44DAB0E3282A910700156A9B /* TrangueellAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				44DAB0E4282A910700156A9B /* TrangueellAppTests.swift */,
+			);
+			path = TrangueellAppTests;
+			sourceTree = "<group>";
+		};
+		44DAB0ED282A910700156A9B /* TrangueellAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				44DAB0EE282A910700156A9B /* TrangueellAppUITests.swift */,
+				44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */,
+			);
+			path = TrangueellAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44DAB0CA282A910400156A9B /* TrangueellApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44DAB0F4282A910700156A9B /* Build configuration list for PBXNativeTarget "TrangueellApp" */;
+			buildPhases = (
+				44DAB0C7282A910400156A9B /* Sources */,
+				44DAB0C8282A910400156A9B /* Frameworks */,
+				44DAB0C9282A910400156A9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrangueellApp;
+			productName = TrangueellApp;
+			productReference = 44DAB0CB282A910400156A9B /* TrangueellApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44DAB0DF282A910700156A9B /* TrangueellAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44DAB0F7282A910700156A9B /* Build configuration list for PBXNativeTarget "TrangueellAppTests" */;
+			buildPhases = (
+				44DAB0DC282A910700156A9B /* Sources */,
+				44DAB0DD282A910700156A9B /* Frameworks */,
+				44DAB0DE282A910700156A9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44DAB0E2282A910700156A9B /* PBXTargetDependency */,
+			);
+			name = TrangueellAppTests;
+			productName = TrangueellAppTests;
+			productReference = 44DAB0E0282A910700156A9B /* TrangueellAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		44DAB0E9282A910700156A9B /* TrangueellAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44DAB0FA282A910700156A9B /* Build configuration list for PBXNativeTarget "TrangueellAppUITests" */;
+			buildPhases = (
+				44DAB0E6282A910700156A9B /* Sources */,
+				44DAB0E7282A910700156A9B /* Frameworks */,
+				44DAB0E8282A910700156A9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44DAB0EC282A910700156A9B /* PBXTargetDependency */,
+			);
+			name = TrangueellAppUITests;
+			productName = TrangueellAppUITests;
+			productReference = 44DAB0EA282A910700156A9B /* TrangueellAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44DAB0C3282A910400156A9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					44DAB0CA282A910400156A9B = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					44DAB0DF282A910700156A9B = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 44DAB0CA282A910400156A9B;
+					};
+					44DAB0E9282A910700156A9B = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 44DAB0CA282A910400156A9B;
+					};
+				};
+			};
+			buildConfigurationList = 44DAB0C6282A910400156A9B /* Build configuration list for PBXProject "TrangueellApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44DAB0C2282A910400156A9B;
+			productRefGroup = 44DAB0CC282A910400156A9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44DAB0CA282A910400156A9B /* TrangueellApp */,
+				44DAB0DF282A910700156A9B /* TrangueellAppTests */,
+				44DAB0E9282A910700156A9B /* TrangueellAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44DAB0C9282A910400156A9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DAB0D6282A910700156A9B /* Preview Assets.xcassets in Resources */,
+				44DAB0D3282A910700156A9B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DAB0DE282A910700156A9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DAB0E8282A910700156A9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44DAB0C7282A910400156A9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DAB0D8282A910700156A9B /* Persistence.swift in Sources */,
+				44DAB0D1282A910400156A9B /* ContentView.swift in Sources */,
+				44DAB0DB282A910700156A9B /* TrangueellApp.xcdatamodeld in Sources */,
+				44DAB0CF282A910400156A9B /* TrangueellAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DAB0DC282A910700156A9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DAB0E5282A910700156A9B /* TrangueellAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DAB0E6282A910700156A9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DAB0EF282A910700156A9B /* TrangueellAppUITests.swift in Sources */,
+				44DAB0F1282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44DAB0E2282A910700156A9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44DAB0CA282A910400156A9B /* TrangueellApp */;
+			targetProxy = 44DAB0E1282A910700156A9B /* PBXContainerItemProxy */;
+		};
+		44DAB0EC282A910700156A9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44DAB0CA282A910400156A9B /* TrangueellApp */;
+			targetProxy = 44DAB0EB282A910700156A9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		44DAB0F2282A910700156A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		44DAB0F3282A910700156A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44DAB0F5282A910700156A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrangueellApp/Preview Content\"";
+				DEVELOPMENT_TEAM = H6XC3A3TTR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Power.TrangueellApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44DAB0F6282A910700156A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrangueellApp/Preview Content\"";
+				DEVELOPMENT_TEAM = H6XC3A3TTR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Power.TrangueellApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44DAB0F8282A910700156A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6XC3A3TTR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Power.TrangueellAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrangueellApp.app/TrangueellApp";
+			};
+			name = Debug;
+		};
+		44DAB0F9282A910700156A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6XC3A3TTR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Power.TrangueellAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrangueellApp.app/TrangueellApp";
+			};
+			name = Release;
+		};
+		44DAB0FB282A910700156A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6XC3A3TTR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Power.TrangueellAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrangueellApp;
+			};
+			name = Debug;
+		};
+		44DAB0FC282A910700156A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6XC3A3TTR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Power.TrangueellAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrangueellApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44DAB0C6282A910400156A9B /* Build configuration list for PBXProject "TrangueellApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DAB0F2282A910700156A9B /* Debug */,
+				44DAB0F3282A910700156A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44DAB0F4282A910700156A9B /* Build configuration list for PBXNativeTarget "TrangueellApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DAB0F5282A910700156A9B /* Debug */,
+				44DAB0F6282A910700156A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44DAB0F7282A910700156A9B /* Build configuration list for PBXNativeTarget "TrangueellAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DAB0F8282A910700156A9B /* Debug */,
+				44DAB0F9282A910700156A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44DAB0FA282A910700156A9B /* Build configuration list for PBXNativeTarget "TrangueellAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DAB0FB282A910700156A9B /* Debug */,
+				44DAB0FC282A910700156A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		44DAB0D9282A910700156A9B /* TrangueellApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				44DAB0DA282A910700156A9B /* TrangueellApp.xcdatamodel */,
+			);
+			currentVersion = 44DAB0DA282A910700156A9B /* TrangueellApp.xcdatamodel */;
+			path = TrangueellApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 44DAB0C3282A910400156A9B /* Project object */;
+}
