@@ -12,9 +12,12 @@ struct DreamView: View {
     var dream: Dream
     
     var body: some View {
-        Text("Dream at \(dream.dreamTitle!)")
-        Text("\(dream.dreamDescription!)")
-        Text("\(dream.dreamDate!.formatted())")
+        VStack {
+            Text("Dream at \(dream.dreamTitle!)")
+            Text("\(dream.dreamDescription!)")
+            Text("\(dream.dreamDate!.formatted())")
+        }
+        .padding()
     }
 }
 
