@@ -27,9 +27,7 @@ struct ContentView: View {
             List {
                 ForEach(dreams) { dream in
                     NavigationLink {
-                        Text("Dream at \(dream.dreamTitle!)")
-                        Text("\(dream.dreamDescription!)")
-                      
+                        DreamView(dream: dream)
                     } label: {
                         Text(dream.dreamTitle!)
                     }

@@ -19,6 +19,7 @@
 		44DAB0FF282AA17400156A9B /* Dream+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */; };
 		44DAB100282AA17400156A9B /* Dream+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */; };
 		44DAB102282AB8C100156A9B /* ModalSetting1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB101282AB8C100156A9B /* ModalSetting1.swift */; };
+		582EDF15282BF59900F304A7 /* DreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDF14282BF59900F304A7 /* DreamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dream+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dream+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		44DAB101282AB8C100156A9B /* ModalSetting1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSetting1.swift; sourceTree = "<group>"; };
+		582EDF14282BF59900F304A7 /* DreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */,
 				44DAB0D0282A910400156A9B /* ContentView.swift */,
+				582EDF14282BF59900F304A7 /* DreamView.swift */,
 				44DAB101282AB8C100156A9B /* ModalSetting1.swift */,
 				44DAB0D2282A910700156A9B /* Assets.xcassets */,
 				44DAB0D7282A910700156A9B /* Persistence.swift */,
@@ -278,6 +281,7 @@
 				44DAB102282AB8C100156A9B /* ModalSetting1.swift in Sources */,
 				44DAB0DB282A910700156A9B /* TrangueellApp.xcdatamodeld in Sources */,
 				44DAB0FF282AA17400156A9B /* Dream+CoreDataClass.swift in Sources */,
+				582EDF15282BF59900F304A7 /* DreamView.swift in Sources */,
 				44DAB0CF282A910400156A9B /* TrangueellAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
