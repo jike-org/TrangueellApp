@@ -42,25 +42,14 @@ struct ModalSetting1: View {
                 
             }.padding(40)
             
-            if text != "" && text_desc != "" {
                 Button("Add dream") {
                     addItem()
                     self.showModal.toggle()
                 }.frame(width: UIScreen.main.bounds.width/2 , height: 50)
-                .background(.blue)
+                .background(text.isEmpty || text_desc.isEmpty ? .gray : .blue)
                 .foregroundColor(.black)
                 .cornerRadius(20)
-            }else{
-                Button("Add dream") {
-                    addItem()
-                    self.showModal.toggle()
-                }.frame(width: UIScreen.main.bounds.width/2 , height: 50)
-                .background(.gray)
-                .foregroundColor(.black)
-                .cornerRadius(20)
-                .disabled(true)
-
-            }
+                .disabled(text.isEmpty || text_desc.isEmpty)
          
             
                 
