@@ -17,17 +17,34 @@ struct ContentView: View {
         animation: .default)
     private var dreams: FetchedResults<Dream>
 
+    let formatter1 = DateFormatter()
+
     var body: some View {
         NavigationView {
+
+            VStack{
+            if dreams.count != 0 {
             List {
                 ForEach(dreams) { dream in
                     NavigationLink {
                         Text("Dream at \(dream.dreamTitle!)")
+                        Text("\(dream.dreamDescription!)")
+                      
                     } label: {
                         Text(dream.dreamTitle!)
                     }
                 }
                 .onDelete(perform: deleteItems)
+            }
+                
+            } else {
+                    Image("sleep_analysis")
+                        .resizable()
+                        .scaledToFit()
+                        
+                    Text("There's no dreams, just start!").font(.system(size: 20, weight: .bold))
+                
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -43,8 +60,9 @@ struct ContentView: View {
                 }
                 }
             }
+            
             Text("Select an item")
-        }
+        }.navigationViewStyle(.stack)
     }
 
     private func addItem() {
