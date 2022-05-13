@@ -51,9 +51,6 @@ struct ModalSetting1: View {
                 .cornerRadius(20)
                 .disabled(text.isEmpty || text_desc.isEmpty)
          
-            
-                
-            
             Spacer()
         }
     }

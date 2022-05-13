@@ -18,7 +18,11 @@
 		44DAB0F1282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */; };
 		44DAB0FF282AA17400156A9B /* Dream+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */; };
 		44DAB100282AA17400156A9B /* Dream+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */; };
-		44DAB102282AB8C100156A9B /* ModalSetting1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB101282AB8C100156A9B /* ModalSetting1.swift */; };
+		44DAB102282AB8C100156A9B /* ModalView_AddDream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */; };
+		45421E57282DAF14001B400E /* ViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45421E56282DAF14001B400E /* ViewHome.swift */; };
+		45421E59282DAFEB001B400E /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45421E58282DAFEB001B400E /* TabView.swift */; };
+		45421E5E282DBED8001B400E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45421E5D282DBED8001B400E /* Notification.swift */; };
+		45B0D6FD282E54F100D78453 /* DreamStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0D6FC282E54F100D78453 /* DreamStatsView.swift */; };
 		582EDF15282BF59900F304A7 /* DreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDF14282BF59900F304A7 /* DreamView.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +58,11 @@
 		44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dream+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dream+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		44DAB101282AB8C100156A9B /* ModalSetting1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSetting1.swift; sourceTree = "<group>"; };
+		44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView_AddDream.swift; sourceTree = "<group>"; };
+		45421E56282DAF14001B400E /* ViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHome.swift; sourceTree = "<group>"; };
+		45421E58282DAFEB001B400E /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		45421E5D282DBED8001B400E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		45B0D6FC282E54F100D78453 /* DreamStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamStatsView.swift; sourceTree = "<group>"; };
 		582EDF14282BF59900F304A7 /* DreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +94,9 @@
 		44DAB0C2282A910400156A9B = {
 			isa = PBXGroup;
 			children = (
-				44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */,
-				44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */,
+				45421E5C282DB45C001B400E /* Model */,
+				45421E5B282DB453001B400E /* ViewModel */,
+				45421E5A282DB439001B400E /* View */,
 				44DAB0CD282A910400156A9B /* TrangueellApp */,
 				44DAB0E3282A910700156A9B /* TrangueellAppTests */,
 				44DAB0ED282A910700156A9B /* TrangueellAppUITests */,
@@ -109,9 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */,
-				44DAB0D0282A910400156A9B /* ContentView.swift */,
-				582EDF14282BF59900F304A7 /* DreamView.swift */,
-				44DAB101282AB8C100156A9B /* ModalSetting1.swift */,
 				44DAB0D2282A910700156A9B /* Assets.xcassets */,
 				44DAB0D7282A910700156A9B /* Persistence.swift */,
 				44DAB0D9282A910700156A9B /* TrangueellApp.xcdatamodeld */,
@@ -143,6 +149,36 @@
 				44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */,
 			);
 			path = TrangueellAppUITests;
+			sourceTree = "<group>";
+		};
+		45421E5A282DB439001B400E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45421E5D282DBED8001B400E /* Notification.swift */,
+				45421E56282DAF14001B400E /* ViewHome.swift */,
+				45421E58282DAFEB001B400E /* TabView.swift */,
+				44DAB0D0282A910400156A9B /* ContentView.swift */,
+				582EDF14282BF59900F304A7 /* DreamView.swift */,
+				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
+				45B0D6FC282E54F100D78453 /* DreamStatsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45421E5B282DB453001B400E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		45421E5C282DB45C001B400E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */,
+				44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,12 +311,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45421E59282DAFEB001B400E /* TabView.swift in Sources */,
 				44DAB0D8282A910700156A9B /* Persistence.swift in Sources */,
+				45B0D6FD282E54F100D78453 /* DreamStatsView.swift in Sources */,
 				44DAB100282AA17400156A9B /* Dream+CoreDataProperties.swift in Sources */,
+				45421E57282DAF14001B400E /* ViewHome.swift in Sources */,
 				44DAB0D1282A910400156A9B /* ContentView.swift in Sources */,
-				44DAB102282AB8C100156A9B /* ModalSetting1.swift in Sources */,
+				44DAB102282AB8C100156A9B /* ModalView_AddDream.swift in Sources */,
 				44DAB0DB282A910700156A9B /* TrangueellApp.xcdatamodeld in Sources */,
 				44DAB0FF282AA17400156A9B /* Dream+CoreDataClass.swift in Sources */,
+				45421E5E282DBED8001B400E /* Notification.swift in Sources */,
 				582EDF15282BF59900F304A7 /* DreamView.swift in Sources */,
 				44DAB0CF282A910400156A9B /* TrangueellAppApp.swift in Sources */,
 			);
