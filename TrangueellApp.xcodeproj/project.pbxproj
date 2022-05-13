@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44986B3F282E8D49008703D7 /* RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44986B3E282E8D49008703D7 /* RandomData.swift */; };
 		44DAB0CF282A910400156A9B /* TrangueellAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */; };
 		44DAB0D1282A910400156A9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0D0282A910400156A9B /* ContentView.swift */; };
 		44DAB0D3282A910700156A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DAB0D2282A910700156A9B /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44986B3E282E8D49008703D7 /* RandomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
 		44DAB0CB282A910400156A9B /* TrangueellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrangueellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppApp.swift; sourceTree = "<group>"; };
 		44DAB0D0282A910400156A9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				44DAB0FD282AA17400156A9B /* Dream+CoreDataClass.swift */,
+				44986B3E282E8D49008703D7 /* RandomData.swift */,
 				44DAB0FE282AA17400156A9B /* Dream+CoreDataProperties.swift */,
 			);
 			path = Model;
@@ -314,6 +317,7 @@
 				45421E59282DAFEB001B400E /* TabView.swift in Sources */,
 				44DAB0D8282A910700156A9B /* Persistence.swift in Sources */,
 				45B0D6FD282E54F100D78453 /* DreamStatsView.swift in Sources */,
+				44986B3F282E8D49008703D7 /* RandomData.swift in Sources */,
 				44DAB100282AA17400156A9B /* Dream+CoreDataProperties.swift in Sources */,
 				45421E57282DAF14001B400E /* ViewHome.swift in Sources */,
 				44DAB0D1282A910400156A9B /* ContentView.swift in Sources */,

@@ -34,21 +34,24 @@ class NotificationManager {
         
         let content = UNMutableNotificationContent() //possiamo avere il contenuto e modificarlo
         //questi perametri sotto li possiamo mettere perché .sound e .badge sono messi prima in options
-        content.title = "Ciao ktm"
-        content.subtitle = "ciao zia"
+        
+        let selectedNotif = notifications.randomElement()
+        
+        content.title = selectedNotif!.title
+        content.subtitle = selectedNotif!.text
         content.sound = .default
         content.badge = 1
         
         
         //in caso di trigger -->
         //time (in questo caso non si ripete che ogni 5 secondi avviene la notifica
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60.0, repeats: true)
         //ma è possibile anche fare trigger per :
         //calendar
-        var dateComponents = DateComponents()
+//        var dateComponents = DateComponents()
         //facendo così ogni volta alle 1.19 si verifica la notifica programmata con hour + min
-        dateComponents.hour = 14
-        dateComponents.minute = 45
+//        dateComponents.hour = 15
+//        dateComponents.minute = 7
 //        dateComponents.weekday = 1 //1 domenica - 2 lunedì - 3 martedì - 4 giovedì - 5 venerdì - 6 sabato
         //se usi hour + minute + weekday si traduce in : Ogni domenica alle 1.19 si verificherà la notifica
         
@@ -68,7 +71,7 @@ class NotificationManager {
 //        region.notifyOnExit = false
 //
 //        let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         //location
 
         let request = UNNotificationRequest(
