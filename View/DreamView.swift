@@ -20,7 +20,7 @@ struct DreamView: View {
             .onChange(of: dreamText) { newValue in
                 updateItem()
             }
-        Text("\(dream.dreamDate!.formatted())")
+        Text(dream.formattedDate)
     }
     
     private func updateItem(){

@@ -25,6 +25,13 @@ struct MainView: View {
                     Label("Profile", systemImage: "person.circle")
                 }
                 
+        }.onAppear() {
+            NotificationManager.instance.requestAuthorization()
+            NotificationManager.instance.scheduleNotification()
+            NotificationManager.instance.deleteNotification()
+            
+            UIApplication.shared.applicationIconBadgeNumber = 0
+        
         }
     }
 }

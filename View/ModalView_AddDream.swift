@@ -26,6 +26,7 @@ struct ModalSetting1: View {
     @State var disabled_button : Bool = true
     
     let dateFormatter = DateFormatter()
+    
 
     var body: some View {
         VStack {

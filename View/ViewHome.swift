@@ -27,9 +27,7 @@ struct ViewHome: View {
                 .foregroundColor(Color.black)
                 .frame(minWidth: 0, maxWidth: 100, minHeight: 0, maxHeight: 100)
                 .edgesIgnoringSafeArea(.all)
-            
-            LocalNotification()
-            
+                        
         }.onTapGesture(count: 1) {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
