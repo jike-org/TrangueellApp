@@ -34,8 +34,11 @@ class NotificationManager {
         
         let content = UNMutableNotificationContent() //possiamo avere il contenuto e modificarlo
         //questi perametri sotto li possiamo mettere perché .sound e .badge sono messi prima in options
-        content.title = "Ciao ktm"
-        content.subtitle = "ciao zia"
+        
+        let selectedNotif = notifications.randomElement()
+        
+        content.title = selectedNotif!.title
+        content.subtitle = selectedNotif!.text
         content.sound = .default
         content.badge = 1
         
@@ -47,8 +50,8 @@ class NotificationManager {
         //calendar
 //        var dateComponents = DateComponents()
         //facendo così ogni volta alle 1.19 si verifica la notifica programmata con hour + min
-//        dateComponents.hour = 14
-//        dateComponents.minute = 45
+//        dateComponents.hour = 15
+//        dateComponents.minute = 7
 //        dateComponents.weekday = 1 //1 domenica - 2 lunedì - 3 martedì - 4 giovedì - 5 venerdì - 6 sabato
         //se usi hour + minute + weekday si traduce in : Ogni domenica alle 1.19 si verificherà la notifica
         

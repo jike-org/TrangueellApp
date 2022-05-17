@@ -15,12 +15,15 @@ struct DreamView: View {
     @State var dreamText: String
     
     var body: some View {
-        Text("Dream at \(dream.dreamTitle!)")
-        TextField("", text: $dreamText)
-            .onChange(of: dreamText) { newValue in
-                updateItem()
-            }
-        Text(dream.formattedDate)
+        VStack{
+            Text("Dream at \(dream.dreamTitle!)")
+            TextField("", text: $dreamText)
+                .onChange(of: dreamText) { newValue in
+                    updateItem()
+                }
+            Text("\(dream.dreamDate!.formatted())")
+        }
+        .padding()
     }
     
     private func updateItem(){
