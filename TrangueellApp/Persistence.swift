@@ -14,10 +14,12 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
 
-        let newDream = Dream(context: viewContext)
-            newDream.dreamTitle = String()
-            newDream.dreamDate = Date()
-            newDream.dreamDescription = String()
+        let newDreamElement = DreamElement(context: viewContext)
+            newDreamElement.text = String()
+            newDreamElement.date = Date()
+        
+        let newDreamCollection = DreamCollection(context: viewContext)
+            newDreamCollection.title = String()
         
         do {
             try viewContext.save()
