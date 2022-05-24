@@ -28,6 +28,13 @@
 		45421E59282DAFEB001B400E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45421E58282DAFEB001B400E /* MainView.swift */; };
 		45421E5E282DBED8001B400E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45421E5D282DBED8001B400E /* Notification.swift */; };
 		582EDF15282BF59900F304A7 /* DreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDF14282BF59900F304A7 /* DreamView.swift */; };
+		C6D30973283BDDD5006A08DE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30972283BDDD5006A08DE /* WidgetKit.framework */; };
+		C6D30975283BDDD5006A08DE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30974283BDDD5006A08DE /* SwiftUI.framework */; };
+		C6D30978283BDDD5006A08DE /* WidgetTrangueell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D30977283BDDD5006A08DE /* WidgetTrangueell.swift */; };
+		C6D3097B283BDDD6006A08DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D3097A283BDDD6006A08DE /* Assets.xcassets */; };
+		C6D3097D283BDDD6006A08DE /* WidgetTrangueell.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C6D30979283BDDD5006A08DE /* WidgetTrangueell.intentdefinition */; };
+		C6D3097E283BDDD6006A08DE /* WidgetTrangueell.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C6D30979283BDDD5006A08DE /* WidgetTrangueell.intentdefinition */; };
+		C6D30981283BDDD6006A08DE /* WidgetTrangueellExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C6D30970283BDDD4006A08DE /* WidgetTrangueellExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +52,28 @@
 			remoteGlobalIDString = 44DAB0CA282A910400156A9B;
 			remoteInfo = TrangueellApp;
 		};
+		C6D3097F283BDDD6006A08DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DAB0C3282A910400156A9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6D3096F283BDDD4006A08DE;
+			remoteInfo = WidgetTrangueellExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C6D30982283BDDD6006A08DE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C6D30981283BDDD6006A08DE /* WidgetTrangueellExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4461D25C283BE37400574C6D /* DreamElement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DreamElement+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -72,6 +100,13 @@
 		45421E58282DAFEB001B400E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		45421E5D282DBED8001B400E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		582EDF14282BF59900F304A7 /* DreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamView.swift; sourceTree = "<group>"; };
+		C6D30970283BDDD4006A08DE /* WidgetTrangueellExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetTrangueellExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D30972283BDDD5006A08DE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C6D30974283BDDD5006A08DE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C6D30977283BDDD5006A08DE /* WidgetTrangueell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTrangueell.swift; sourceTree = "<group>"; };
+		C6D30979283BDDD5006A08DE /* WidgetTrangueell.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WidgetTrangueell.intentdefinition; sourceTree = "<group>"; };
+		C6D3097A283BDDD6006A08DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6D3097C283BDDD6006A08DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +131,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6D3096D283BDDD4006A08DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D30975283BDDD5006A08DE /* SwiftUI.framework in Frameworks */,
+				C6D30973283BDDD5006A08DE /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -108,6 +152,8 @@
 				44DAB0CD282A910400156A9B /* TrangueellApp */,
 				44DAB0E3282A910700156A9B /* TrangueellAppTests */,
 				44DAB0ED282A910700156A9B /* TrangueellAppUITests */,
+				C6D30976283BDDD5006A08DE /* WidgetTrangueell */,
+				C6D30971283BDDD4006A08DE /* Frameworks */,
 				44DAB0CC282A910400156A9B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +164,7 @@
 				44DAB0CB282A910400156A9B /* TrangueellApp.app */,
 				44DAB0E0282A910700156A9B /* TrangueellAppTests.xctest */,
 				44DAB0EA282A910700156A9B /* TrangueellAppUITests.xctest */,
+				C6D30970283BDDD4006A08DE /* WidgetTrangueellExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +240,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C6D30971283BDDD4006A08DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6D30972283BDDD5006A08DE /* WidgetKit.framework */,
+				C6D30974283BDDD5006A08DE /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6D30976283BDDD5006A08DE /* WidgetTrangueell */ = {
+			isa = PBXGroup;
+			children = (
+				C6D30977283BDDD5006A08DE /* WidgetTrangueell.swift */,
+				C6D30979283BDDD5006A08DE /* WidgetTrangueell.intentdefinition */,
+				C6D3097A283BDDD6006A08DE /* Assets.xcassets */,
+				C6D3097C283BDDD6006A08DE /* Info.plist */,
+			);
+			path = WidgetTrangueell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,10 +270,12 @@
 				44DAB0C7282A910400156A9B /* Sources */,
 				44DAB0C8282A910400156A9B /* Frameworks */,
 				44DAB0C9282A910400156A9B /* Resources */,
+				C6D30982283BDDD6006A08DE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C6D30980283BDDD6006A08DE /* PBXTargetDependency */,
 			);
 			name = TrangueellApp;
 			productName = TrangueellApp;
@@ -249,6 +318,23 @@
 			productReference = 44DAB0EA282A910700156A9B /* TrangueellAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C6D3096F283BDDD4006A08DE /* WidgetTrangueellExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6D30985283BDDD6006A08DE /* Build configuration list for PBXNativeTarget "WidgetTrangueellExtension" */;
+			buildPhases = (
+				C6D3096C283BDDD4006A08DE /* Sources */,
+				C6D3096D283BDDD4006A08DE /* Frameworks */,
+				C6D3096E283BDDD4006A08DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetTrangueellExtension;
+			productName = WidgetTrangueellExtension;
+			productReference = C6D30970283BDDD4006A08DE /* WidgetTrangueellExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,7 +342,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					44DAB0CA282A910400156A9B = {
@@ -269,6 +355,9 @@
 					44DAB0E9282A910700156A9B = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = 44DAB0CA282A910400156A9B;
+					};
+					C6D3096F283BDDD4006A08DE = {
+						CreatedOnToolsVersion = 13.4;
 					};
 				};
 			};
@@ -288,6 +377,7 @@
 				44DAB0CA282A910400156A9B /* TrangueellApp */,
 				44DAB0DF282A910700156A9B /* TrangueellAppTests */,
 				44DAB0E9282A910700156A9B /* TrangueellAppUITests */,
+				C6D3096F283BDDD4006A08DE /* WidgetTrangueellExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -316,6 +406,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6D3096E283BDDD4006A08DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D3097B283BDDD6006A08DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -326,6 +424,8 @@
 				45421E59282DAFEB001B400E /* MainView.swift in Sources */,
 				44DAB0D8282A910700156A9B /* Persistence.swift in Sources */,
 				44986B3F282E8D49008703D7 /* RandomData.swift in Sources */,
+				44DAB100282AA17400156A9B /* Dream+CoreDataProperties.swift in Sources */,
+				C6D3097E283BDDD6006A08DE /* WidgetTrangueell.intentdefinition in Sources */,
 				45421E57282DAF14001B400E /* ViewHome.swift in Sources */,
 				4461D265283BE55500574C6D /* RealityView.swift in Sources */,
 				44DAB0D1282A910400156A9B /* ContentView.swift in Sources */,
@@ -359,6 +459,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6D3096C283BDDD4006A08DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D30978283BDDD5006A08DE /* WidgetTrangueell.swift in Sources */,
+				C6D3097D283BDDD6006A08DE /* WidgetTrangueell.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -371,6 +480,11 @@
 			isa = PBXTargetDependency;
 			target = 44DAB0CA282A910400156A9B /* TrangueellApp */;
 			targetProxy = 44DAB0EB282A910700156A9B /* PBXContainerItemProxy */;
+		};
+		C6D30980283BDDD6006A08DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6D3096F283BDDD4006A08DE /* WidgetTrangueellExtension */;
+			targetProxy = C6D3097F283BDDD6006A08DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -492,6 +606,7 @@
 		44DAB0F5282A910700156A9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -521,6 +636,7 @@
 		44DAB0F6282A910700156A9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -623,6 +739,62 @@
 			};
 			name = Release;
 		};
+		C6D30983283BDDD6006A08DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6LL88859YA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetTrangueell/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetTrangueell;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Power.TrangueellApp.WidgetTrangueell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C6D30984283BDDD6006A08DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6LL88859YA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetTrangueell/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetTrangueell;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Power.TrangueellApp.WidgetTrangueell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -658,6 +830,15 @@
 			buildConfigurations = (
 				44DAB0FB282A910700156A9B /* Debug */,
 				44DAB0FC282A910700156A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6D30985283BDDD6006A08DE /* Build configuration list for PBXNativeTarget "WidgetTrangueellExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6D30983283BDDD6006A08DE /* Debug */,
+				C6D30984283BDDD6006A08DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
