@@ -30,6 +30,8 @@
 		4573679E283DA9DF001CE236 /* ModalViewMorning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573679D283DA9DF001CE236 /* ModalViewMorning.swift */; };
 		45C498FC283D7E8500B0AA3C /* RealityViewNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */; };
 		45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */; };
+		5817FA72283E60340082B900 /* SingleBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817FA71283E60340082B900 /* SingleBubbleView.swift */; };
+		5817FA74283E61020082B900 /* DreamSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817FA73283E61020082B900 /* DreamSignView.swift */; };
 		582EDF15282BF59900F304A7 /* DreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDF14282BF59900F304A7 /* DreamView.swift */; };
 		C6D30973283BDDD5006A08DE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30972283BDDD5006A08DE /* WidgetKit.framework */; };
 		C6D30975283BDDD5006A08DE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30974283BDDD5006A08DE /* SwiftUI.framework */; };
@@ -105,6 +107,8 @@
 		4573679D283DA9DF001CE236 /* ModalViewMorning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewMorning.swift; sourceTree = "<group>"; };
 		45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityViewNight.swift; sourceTree = "<group>"; };
 		45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueInfoView.swift; sourceTree = "<group>"; };
+		5817FA71283E60340082B900 /* SingleBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBubbleView.swift; sourceTree = "<group>"; };
+		5817FA73283E61020082B900 /* DreamSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSignView.swift; sourceTree = "<group>"; };
 		582EDF14282BF59900F304A7 /* DreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamView.swift; sourceTree = "<group>"; };
 		C6D30970283BDDD4006A08DE /* WidgetTrangueellExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetTrangueellExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D30972283BDDD5006A08DE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -226,6 +230,8 @@
 				45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */,
 				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
 				45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */,
+				5817FA71283E60340082B900 /* SingleBubbleView.swift */,
+				5817FA73283E61020082B900 /* DreamSignView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				44DAB0D8282A910700156A9B /* Persistence.swift in Sources */,
 				45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */,
 				44986B3F282E8D49008703D7 /* RandomData.swift in Sources */,
+				5817FA72283E60340082B900 /* SingleBubbleView.swift in Sources */,
 				C6D3097E283BDDD6006A08DE /* WidgetTrangueell.intentdefinition in Sources */,
 				45421E57282DAF14001B400E /* ViewHome.swift in Sources */,
 				4461D265283BE55500574C6D /* RealityViewMorning.swift in Sources */,
@@ -448,6 +455,7 @@
 				4461D260283BE37400574C6D /* DreamElement+CoreDataClass.swift in Sources */,
 				4461D267283D11D700574C6D /* DreamCard.swift in Sources */,
 				4461D261283BE37400574C6D /* DreamElement+CoreDataProperties.swift in Sources */,
+				5817FA74283E61020082B900 /* DreamSignView.swift in Sources */,
 				45C498FC283D7E8500B0AA3C /* RealityViewNight.swift in Sources */,
 				44DAB0CF282A910400156A9B /* TrangueellAppApp.swift in Sources */,
 			);
