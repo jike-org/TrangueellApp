@@ -11,19 +11,19 @@ import AVFoundation
 import Foundation
 
 struct RealityView: View {
-
+    
     @State var is_Loop : Bool = false
     
     let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
-
+    
     @State var totalRotation = CGSize.zero
     @State var currentRotation = CGSize.zero
-
+    
     //liquid swipe
     @State var offset : CGSize = .zero
     @State var showHome = false
     @State var showModal_settings : Bool = false
-
+    
     @State var isPresentedFullScreenCover : Bool = false
     
     @State var is_Sun : Bool = true
@@ -33,8 +33,8 @@ struct RealityView: View {
     @State var is_Vibrate : Bool = false
     
     @State var values_slider: Double = 0
-
-
+    
+    
     let data = Array(1...4).map { "Item \($0)" }
     let layout = [
         GridItem(.flexible(minimum: 2)),
@@ -44,45 +44,46 @@ struct RealityView: View {
     
     var body: some View {
         NavigationView{
-        ZStack{
-            Color.black
-//                .clipShape(LiquidSwipe(offset: offset))
-                .ignoresSafeArea()
-                .overlay(
-                    ZStack{
-                        
-                    Rectangle()
-                        .frame(width: 100, height: 50)
-                        .foregroundColor(.red)
-                        .cornerRadius(20)
-                    Image(systemName: "sun.max")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .padding(.trailing, 30)
-                        .frame(width: 50, height: 50)
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            withAnimation(.spring()) {
-                                let screen = UIScreen.main.bounds
-                                offset.width = -screen.height
-                                if -offset.width > screen.width / 2 {
-                                    offset.width = -screen.height - 300
+            ZStack{
+                Color.black
+                //                .clipShape(LiquidSwipe(offset: offset))
+                    .ignoresSafeArea()
+                    .overlay(
+                        ZStack{
+                            
+                                                Rectangle()
+                           
+                                .frame(width: 100, height: 50)
+                                .foregroundColor(.red)
+                                .cornerRadius(20)
+                            Image(systemName: "sun.max")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                                .padding(.trailing, 30)
+                                .frame(width: 50, height: 50)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    withAnimation(.spring()) {
+                                        let screen = UIScreen.main.bounds
+                                        offset.width = -screen.height
+                                        if -offset.width > screen.width / 2 {
+                                            offset.width = -screen.height - 300
+                                        }
+                                        showHome.toggle()
+                                    }
+                                    is_Sun = true
                                 }
-                                showHome.toggle()
-                            }
-                            is_Sun = true
                         }
-                    }
-                   .offset(x: 20, y: 80)
-                        .opacity(offset == .zero ? 1 : 0), alignment: .topTrailing
+                            .offset(x: 20, y: 80)
+                            .opacity(offset == .zero ? 1 : 0), alignment: .topTrailing
+                        
+                    )
+                
+                VStack(spacing: 100.0){
+                    Text("Morning Reality Check")
+                        .foregroundColor(.white)
+                    Spacer()
                     
-                )
-
-            VStack(spacing: 100.0){
-                Text("Morning Reality Check")
-                    .foregroundColor(.white)
-                Spacer()
-
                     LazyVGrid(columns: layout, spacing: 0) {
                         ForEach(data, id: \.self) { item in
                             //insert card per bolla
@@ -90,64 +91,64 @@ struct RealityView: View {
                                 .fullScreenCover(isPresented: $isPresentedFullScreenCover) {
                                     FullScreenModalView()
                                 }
-                                
-                            }.padding(.vertical, 40)
-                           
-                        }
+                            
+                        }.padding(.vertical, 40)
+                        
+                    }
                     Spacer()
                 }.padding(.horizontal, 20)
-                .toolbar {
-                    ToolbarItem {
-                        Button {
-                            self.showModal_settings.toggle()
-                        } label: {
-                            Label("Add Item", systemImage: "gear")
-                                .foregroundColor(.white)
-                        }.sheet(isPresented: $showModal_settings){
-                            ModalViewMorning(is_Sound: $is_Sound, is_Vibrate: $is_Vibrate, values_slider: $values_slider)
+                    .toolbar {
+                        ToolbarItem {
+                            Button {
+                                self.showModal_settings.toggle()
+                            } label: {
+                                Label("Add Item", systemImage: "gear")
+                                    .foregroundColor(.white)
+                            }.sheet(isPresented: $showModal_settings){
+                                ModalViewMorning(is_Sound: $is_Sound, is_Vibrate: $is_Vibrate, values_slider: $values_slider)
+                            }
                         }
                     }
-                }
                 if showHome {
                     RealityView2(is_Moon: $is_Moon)
                 }
-
+                
             }
             
             
-//                Color.black
-//                    .clipShape(LiquidSwipe(offset: offset))
-//                    .ignoresSafeArea()
-//                    .overlay(
-//                        Image(systemName: "moon")
-//                            .font(.largeTitle)
-//                            .foregroundColor(.black)
-//                            .frame(width: 50, height: 50)
-//                            .contentShape(Rectangle())
-//                            .onTapGesture {
-//                                withAnimation(.spring()) {
-//                                    let screen = UIScreen.main.bounds
-//                                    offset.width = -screen.height
-//                                    if -offset.width > screen.width / 2 {
-//                                        offset.width = -screen.height - 300
-//                                    }
-//                                    showHome.toggle()
-//                                }
-//                            }
-//                       .offset(x: 10, y: 80)
-//                            .opacity(offset == .zero ? 1 : 0), alignment: .topLeading
-//
-//                    )
-
-                
-//                Text("ciaoooo")
-//                    .foregroundColor(.red)
-//                    .onTapGesture {
-//                        withAnimation(.spring()) {
-//                            offset = .zero
-//                            showHome.toggle()
-//                        }
-//                    }
+            //                Color.black
+            //                    .clipShape(LiquidSwipe(offset: offset))
+            //                    .ignoresSafeArea()
+            //                    .overlay(
+            //                        Image(systemName: "moon")
+            //                            .font(.largeTitle)
+            //                            .foregroundColor(.black)
+            //                            .frame(width: 50, height: 50)
+            //                            .contentShape(Rectangle())
+            //                            .onTapGesture {
+            //                                withAnimation(.spring()) {
+            //                                    let screen = UIScreen.main.bounds
+            //                                    offset.width = -screen.height
+            //                                    if -offset.width > screen.width / 2 {
+            //                                        offset.width = -screen.height - 300
+            //                                    }
+            //                                    showHome.toggle()
+            //                                }
+            //                            }
+            //                       .offset(x: 10, y: 80)
+            //                            .opacity(offset == .zero ? 1 : 0), alignment: .topLeading
+            //
+            //                    )
+            
+            
+            //                Text("ciaoooo")
+            //                    .foregroundColor(.red)
+            //                    .onTapGesture {
+            //                        withAnimation(.spring()) {
+            //                            offset = .zero
+            //                            showHome.toggle()
+            //                        }
+            //                    }
             
         }.navigationBarHidden(true)
         
@@ -157,7 +158,7 @@ struct RealityView: View {
 
 struct FullScreenModalView: View {
     @Environment(\.presentationMode) var presentationMode
-
+    
     var body: some View {
         ZStack {
             
@@ -175,18 +176,18 @@ struct FullScreenModalView: View {
                             .foregroundColor(.white)
                             .padding()
                         
-                        }
-                    Spacer()
                     }
+                    Spacer()
+                }
             }
             
             Text("Ciao")
                 .foregroundColor(.white)
-                
-            }
- 
+            
         }
+        
     }
+}
 
 struct NonModalButton: UIViewRepresentable {
     
@@ -230,7 +231,7 @@ struct LiquidSwipe : Shape {
         get{return offset.animatableData}
         set{offset.animatableData = newValue}
     }
-     
+    
     func path(in rect: CGRect) -> Path {
         return Path { path in
             
@@ -241,11 +242,11 @@ struct LiquidSwipe : Shape {
             path.addLine(to: CGPoint(x: rect.width, y: 0 ))
             path.addLine(to: CGPoint(x: rect.width, y: rect.height))
             path.addLine(to: CGPoint(x: 0, y: rect.height ))
-
+            
             let from = 80 + (offset.width)
-
+            
             path.move(to: CGPoint(x: rect.width, y: from > 80 ? 80 : from))
-
+            
             //ora costruiamo la forma la forma curva
             var to = 220 + (offset.height) + (-offset.width)
             to = to < 180 ? 180 : to

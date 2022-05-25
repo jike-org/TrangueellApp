@@ -14,6 +14,7 @@ struct TechniqueView : View {
     var body: some View {
         
         ZStack{
+            Image("squarebubble")
             VStack{
                 HStack{
                     Spacer()
@@ -27,14 +28,20 @@ struct TechniqueView : View {
                     }
      
                 }
+                Spacer()
                 Text("Lorem ipsum")
                     .foregroundColor(.white)
+                Spacer()
             }
-        }.padding()
-            .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(.blue, lineWidth: 4)
-                )
+            .padding()
+        }
+        .frame(width: 100, height: 100)
+        
+       
+//            .overlay(
+//                    RoundedRectangle(cornerRadius: 16)
+//                        .stroke(.blue, lineWidth: 4)
+//                )
         
     }
 }
