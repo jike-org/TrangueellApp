@@ -19,21 +19,25 @@ struct ContentView: View {
 
     let formatter1 = DateFormatter()
 
+    init() {
+        UITabBar.appearance().barTintColor = .white
+        }
+    
     var body: some View {
         VStack{
-            HStack{
-                Spacer()
-                Button(action: {
-                    self.showModal.toggle()
-                }, label: {
-                    Image(systemName: "plus")
-                        .foregroundColor(.black)
-                })
-                .sheet(isPresented: $showModal){
-                    ModalAddDream(showModal: $showModal)
-                }
-                .padding()
-            }
+//            HStack{
+//                Spacer()
+//                Button(action: {
+//                    self.showModal.toggle()
+//                }, label: {
+//                    Image(systemName: "plus")
+//                        .foregroundColor(.black)
+//                })
+//                .sheet(isPresented: $showModal){
+//                    ModalAddDream(showModal: $showModal)
+//                }
+//                .padding()
+//            }
             TabView{
                 MainView()
                     .tabItem {
@@ -43,7 +47,7 @@ struct ContentView: View {
                     .tabItem {
                         Label("Reality Screen", systemImage: "eye")
                     }
-            }
+            }.accentColor(.white)
         }
     }
 }

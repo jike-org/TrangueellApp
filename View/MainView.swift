@@ -16,15 +16,34 @@ struct MainView: View {
         animation: .default)
     private var dreams: FetchedResults<DreamElement>
     
+    @State private var showModal = false
+
     var body: some View {
+        
+        VStack{
+         
+        HStack{
+            Spacer()
+            Button(action: {
+                self.showModal.toggle()
+            }, label: {
+                Image(systemName: "plus")
+                    .foregroundColor(.black)
+            })
+            .sheet(isPresented: $showModal){
+                ModalAddDream(showModal: $showModal)
+            }
+            .padding()
+        }
+        
         List {
             ForEach(dreams) { dream in
                 Text(dream.text!)
             }
             .onDelete(perform: deleteDreamElement)
 
+            }
         }
-        
 
         
 //        TabView {

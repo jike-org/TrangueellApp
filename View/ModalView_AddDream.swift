@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ModalAddDream: View {
     
+    
     @Environment(\.managedObjectContext) private var viewContext
     @Binding var showModal: Bool
     
