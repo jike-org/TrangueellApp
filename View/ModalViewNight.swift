@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ModalViewMorning : View {
+struct ModalViewNight : View {
 
     @Binding var is_Sound : Bool
     @Binding var is_Vibrate : Bool

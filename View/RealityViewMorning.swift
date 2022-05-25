@@ -33,6 +33,8 @@ struct RealityView: View {
     @State var is_Vibrate : Bool = false
     
     @State var values_slider: Double = 0
+    
+    @State var ButtonDisabled: Bool = false
 
 
     let data = Array(1...4).map { "Item \($0)" }
@@ -70,8 +72,9 @@ struct RealityView: View {
                                 }
                                 showHome.toggle()
                             }
-                            is_Sun = true
+                            is_Moon = true
                         }
+                        .disabled(ButtonDisabled)
                     }
                    .offset(x: 20, y: 80)
                         .opacity(offset == .zero ? 1 : 0), alignment: .topTrailing
@@ -104,12 +107,39 @@ struct RealityView: View {
                             Label("Add Item", systemImage: "gear")
                                 .foregroundColor(.white)
                         }.sheet(isPresented: $showModal_settings){
-                            ModalViewMorning(is_Sound: $is_Sound, is_Vibrate: $is_Vibrate, values_slider: $values_slider)
+                            if is_Moon {
+                                ModalViewNight(is_Sound: $is_Sound, is_Vibrate: $is_Vibrate, values_slider: $values_slider)
+                            }
+                            else if is_Sun {
+                                HalfSheet{
+                                    ZStack{
+                                        Color.black
+                                            .ignoresSafeArea()
+                                        VStack {
+                                            Capsule()
+                                                .fill(Color.white)
+                                                .frame(width: 50, height: 3)
+                                                .padding(10)
+
+                                            Text("Bitch")
+                                                .foregroundColor(.white)
+                                            Spacer()
+                                        }
+                                    }
+                                }
+                                .background(.black)
+                                .onAppear(){
+                                    ButtonDisabled = true
+                                }
+                                .onDisappear(){
+                                    ButtonDisabled = false
+                                }
+                            }
                         }
                     }
                 }
                 if showHome {
-                    RealityView2(is_Moon: $is_Moon)
+                    RealityView2(is_Moon: $is_Moon, is_Sun: $is_Sun)
                 }
 
             }

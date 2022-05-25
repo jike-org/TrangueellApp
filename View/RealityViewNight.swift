@@ -22,7 +22,8 @@ struct RealityView2: View {
     @State var offset : CGSize = .zero
     @State var showHome = false
     
-    @Binding var is_Moon : Bool 
+    @Binding var is_Moon : Bool
+    @Binding var is_Sun : Bool
     let data = Array(1...4).map { "Item \($0)" }
     let layout = [
         GridItem(.flexible(minimum: 2)),
@@ -56,7 +57,7 @@ struct RealityView2: View {
                                 if offset.width > screen.width / 2 {
                                     offset.width = -screen.height + 10
                                 }
-                                is_Moon = true
+                                is_Sun = true
                                 showHome.toggle()
                                 
                             }

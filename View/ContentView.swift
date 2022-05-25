@@ -26,7 +26,6 @@ struct ContentView: View {
     var body: some View {
         VStack{
             TabView{
-//                MainView()
                 DreamSignView()
                     .tabItem {
                         Label("First Screen", systemImage: "tag")

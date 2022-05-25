@@ -14,6 +14,7 @@
 		4461D265283BE55500574C6D /* RealityViewMorning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4461D264283BE55500574C6D /* RealityViewMorning.swift */; };
 		4461D267283D11D700574C6D /* DreamCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4461D266283D11D700574C6D /* DreamCard.swift */; };
 		44986B3F282E8D49008703D7 /* RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44986B3E282E8D49008703D7 /* RandomData.swift */; };
+		449BD8DD283E6FDB005AC7FC /* HalfModalMorning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */; };
 		44DAB0CF282A910400156A9B /* TrangueellAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */; };
 		44DAB0D1282A910400156A9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0D0282A910400156A9B /* ContentView.swift */; };
 		44DAB0D3282A910700156A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DAB0D2282A910700156A9B /* Assets.xcassets */; };
@@ -25,14 +26,12 @@
 		44DAB0F1282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */; };
 		44DAB102282AB8C100156A9B /* ModalView_AddDream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */; };
 		45421E57282DAF14001B400E /* ViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45421E56282DAF14001B400E /* ViewHome.swift */; };
-		45421E59282DAFEB001B400E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45421E58282DAFEB001B400E /* MainView.swift */; };
 		45421E5E282DBED8001B400E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45421E5D282DBED8001B400E /* Notification.swift */; };
-		4573679E283DA9DF001CE236 /* ModalViewMorning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573679D283DA9DF001CE236 /* ModalViewMorning.swift */; };
+		4573679E283DA9DF001CE236 /* ModalViewNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573679D283DA9DF001CE236 /* ModalViewNight.swift */; };
 		45C498FC283D7E8500B0AA3C /* RealityViewNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */; };
 		45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */; };
 		5817FA72283E60340082B900 /* SingleBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817FA71283E60340082B900 /* SingleBubbleView.swift */; };
 		5817FA74283E61020082B900 /* DreamSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817FA73283E61020082B900 /* DreamSignView.swift */; };
-		582EDF15282BF59900F304A7 /* DreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDF14282BF59900F304A7 /* DreamView.swift */; };
 		C6D30973283BDDD5006A08DE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30972283BDDD5006A08DE /* WidgetKit.framework */; };
 		C6D30975283BDDD5006A08DE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30974283BDDD5006A08DE /* SwiftUI.framework */; };
 		C6D30978283BDDD5006A08DE /* WidgetTrangueell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D30977283BDDD5006A08DE /* WidgetTrangueell.swift */; };
@@ -88,6 +87,7 @@
 		4461D264283BE55500574C6D /* RealityViewMorning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityViewMorning.swift; sourceTree = "<group>"; };
 		4461D266283D11D700574C6D /* DreamCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamCard.swift; sourceTree = "<group>"; };
 		44986B3E282E8D49008703D7 /* RandomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
+		449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalMorning.swift; sourceTree = "<group>"; };
 		44DAB0CB282A910400156A9B /* TrangueellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrangueellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppApp.swift; sourceTree = "<group>"; };
 		44DAB0D0282A910400156A9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,14 +102,12 @@
 		44DAB0F0282A910700156A9B /* TrangueellAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView_AddDream.swift; sourceTree = "<group>"; };
 		45421E56282DAF14001B400E /* ViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHome.swift; sourceTree = "<group>"; };
-		45421E58282DAFEB001B400E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		45421E5D282DBED8001B400E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		4573679D283DA9DF001CE236 /* ModalViewMorning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewMorning.swift; sourceTree = "<group>"; };
+		4573679D283DA9DF001CE236 /* ModalViewNight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewNight.swift; sourceTree = "<group>"; };
 		45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityViewNight.swift; sourceTree = "<group>"; };
 		45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueInfoView.swift; sourceTree = "<group>"; };
 		5817FA71283E60340082B900 /* SingleBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBubbleView.swift; sourceTree = "<group>"; };
 		5817FA73283E61020082B900 /* DreamSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSignView.swift; sourceTree = "<group>"; };
-		582EDF14282BF59900F304A7 /* DreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamView.swift; sourceTree = "<group>"; };
 		C6D30970283BDDD4006A08DE /* WidgetTrangueellExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetTrangueellExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D30972283BDDD5006A08DE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		C6D30974283BDDD5006A08DE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -222,16 +220,15 @@
 				45421E5D282DBED8001B400E /* Notification.swift */,
 				4461D266283D11D700574C6D /* DreamCard.swift */,
 				45421E56282DAF14001B400E /* ViewHome.swift */,
-				45421E58282DAFEB001B400E /* MainView.swift */,
 				44DAB0D0282A910400156A9B /* ContentView.swift */,
 				4461D264283BE55500574C6D /* RealityViewMorning.swift */,
-				4573679D283DA9DF001CE236 /* ModalViewMorning.swift */,
-				582EDF14282BF59900F304A7 /* DreamView.swift */,
+				4573679D283DA9DF001CE236 /* ModalViewNight.swift */,
 				45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */,
 				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
 				45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */,
 				5817FA71283E60340082B900 /* SingleBubbleView.swift */,
 				5817FA73283E61020082B900 /* DreamSignView.swift */,
+				449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -436,7 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45421E59282DAFEB001B400E /* MainView.swift in Sources */,
+				449BD8DD283E6FDB005AC7FC /* HalfModalMorning.swift in Sources */,
 				44DAB0D8282A910700156A9B /* Persistence.swift in Sources */,
 				45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */,
 				44986B3F282E8D49008703D7 /* RandomData.swift in Sources */,
@@ -448,10 +445,9 @@
 				44DAB102282AB8C100156A9B /* ModalView_AddDream.swift in Sources */,
 				4461D262283BE37400574C6D /* DreamCollection+CoreDataClass.swift in Sources */,
 				44DAB0DB282A910700156A9B /* TrangueellApp.xcdatamodeld in Sources */,
-				4573679E283DA9DF001CE236 /* ModalViewMorning.swift in Sources */,
+				4573679E283DA9DF001CE236 /* ModalViewNight.swift in Sources */,
 				45421E5E282DBED8001B400E /* Notification.swift in Sources */,
 				4461D263283BE37400574C6D /* DreamCollection+CoreDataProperties.swift in Sources */,
-				582EDF15282BF59900F304A7 /* DreamView.swift in Sources */,
 				4461D260283BE37400574C6D /* DreamElement+CoreDataClass.swift in Sources */,
 				4461D267283D11D700574C6D /* DreamCard.swift in Sources */,
 				4461D261283BE37400574C6D /* DreamElement+CoreDataProperties.swift in Sources */,
