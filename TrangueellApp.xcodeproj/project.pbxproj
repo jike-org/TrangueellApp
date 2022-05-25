@@ -222,7 +222,7 @@
 				45421E56282DAF14001B400E /* ViewHome.swift */,
 				44DAB0D0282A910400156A9B /* ContentView.swift */,
 				4461D264283BE55500574C6D /* RealityViewMorning.swift */,
-				4573679D283DA9DF001CE236 /* ModalViewNight.swift */,
+				4573679D283DA9DF001CE236 /* ModalViewMorning.swift */,
 				45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */,
 				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
 				45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */,

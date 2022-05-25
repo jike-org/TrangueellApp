@@ -9,10 +9,10 @@ import SwiftUI
 
 struct SingleBubbleView: View {
     
-    @State var bubbleDiameter : CGFloat = 100.0
+    @State var bubbleDiameter : CGFloat = 125.0
     @State var textSize : CGFloat = 14.0
     @State var offset: CGSize = .zero
-//    var bubble : Bubble
+    //    var bubble : Bubble
     var bubble : DreamElement
     
     func increaseBubble() {
@@ -37,15 +37,18 @@ struct SingleBubbleView: View {
     
     var body: some View {
         ZStack {
-            Circle()
-                
+//            Circle()
+            Image("bubble")
+                .resizable()
+            
             Text(bubble.text!)
                 .font(.system(size: textSize))
+                .foregroundColor(.white)
                 .lineLimit(1)
-                
-                
+            
+            
         }
-        .frame(width: bubbleDiameter)
+        .frame(width: bubbleDiameter, height: bubbleDiameter)
         .offset(offset)
         .onTapGesture(count: 2, perform:{ decreaseBubble()})
         .onTapGesture(count: 1, perform:{ increaseBubble()})
