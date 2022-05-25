@@ -58,6 +58,7 @@ struct RealityView2: View {
                                     offset.width = -screen.height + 10
                                 }
                                 is_Sun = true
+                                is_Moon = false
                                 showHome.toggle()
                                 
                             }

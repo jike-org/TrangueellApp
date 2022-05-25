@@ -73,8 +73,10 @@ struct RealityView: View {
                                         }
                                         showHome.toggle()
                                     }
+                                    is_Moon = true
                                     is_Sun = true
                                 }
+                                .disabled(ButtonDisabled)
                         }
                             .offset(x: 20, y: 80)
                             .opacity(offset == .zero ? 1 : 0), alignment: .topTrailing
@@ -84,25 +86,8 @@ struct RealityView: View {
                 VStack(spacing: 100.0){
                     Text("Morning Reality Check")
                         .foregroundColor(.white)
-                        .padding(.trailing, 30)
-                        .frame(width: 50, height: 50)
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            withAnimation(.spring()) {
-                                let screen = UIScreen.main.bounds
-                                offset.width = -screen.height
-                                if -offset.width > screen.width / 2 {
-                                    offset.width = -screen.height - 300
-                                }
-                                showHome.toggle()
-                            }
-                            is_Moon = true
-                        }
-                        .disabled(ButtonDisabled)
-                    }
-                   .offset(x: 20, y: 80)
-                        .opacity(offset == .zero ? 1 : 0), alignment: .topTrailing
-                    
+                    Spacer()
+
                     LazyVGrid(columns: layout, spacing: 0) {
                         ForEach(data, id: \.self) { item in
                             //insert card per bolla
@@ -154,10 +139,10 @@ struct RealityView: View {
                             }
                         }
                     }
+            }
                 if showHome {
                     RealityView2(is_Moon: $is_Moon, is_Sun: $is_Sun)
                 }
-                
             }
             
             
