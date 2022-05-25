@@ -30,14 +30,6 @@ struct ModalAddDream: View {
     @State var showView5 = false
     
     @State var selectedCategory: Category = person
-//    @State var createdDream1: DreamElement = DreamElement()
-//    @State var createdDream2: DreamElement = DreamElement()
-//    @State var createdDream3: DreamElement = DreamElement()
-//    @State var createdDream4: DreamElement = DreamElement()
-//    @State var createdDream5: DreamElement = DreamElement()
-
-
-
 
     var body: some View {
         VStack {
@@ -50,23 +42,18 @@ struct ModalAddDream: View {
                         selectedCategory = category
                         if showView5 == false && showView4 == true{
                             showView5 = true
-//                            createdDream5 = addDreamElement()
                         }
                         if showView4 == false && showView3 == true{
                             showView4 = true
-//                            createdDream4 = addDreamElement()
                         }
                         if showView3 == false && showView2 == true{
                             showView3 = true
-//                            createdDream3 = addDreamElement()
                         }
                         if showView2 == false && showView1 == true{
                             showView2 = true
-//                            createdDream2 = addDreamElement()
                         }
                         if showView1 == false{
                             showView1 = true
-//                            createdDream1 = addDreamElement()
                         }
 
                     } label: {
@@ -98,37 +85,8 @@ struct ModalAddDream: View {
                     .padding()
             }
             Spacer()
-
-//                Button("Add dream") {
-//                    addItem()
-//                    self.showModal.toggle()
-//                }.frame(width: UIScreen.main.bounds.width/2 , height: 50)
-//                .background(text.isEmpty || text_desc.isEmpty ? .gray : .blue)
-//                .foregroundColor(.black)
-//                .cornerRadius(20)
-//                .disabled(text.isEmpty || text_desc.isEmpty)
-//
-//            Spacer()
         }
     }
-    
-//    private func addDreamElement() -> DreamElement{
-//        withAnimation {
-//            let newDreamElement = DreamElement(context: viewContext)
-//            newDreamElement.category = selectedCategory.name
-//            newDreamElement.text = text_field
-//            newDreamElement.date = Calendar.current.date(from: DateComponents())
-//            do {
-//                try viewContext.save()
-//            } catch {
-//                // Replace this implementation with code to handle the error appropriately.
-//                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//                let nsError = error as NSError
-//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//            }
-//            return newDreamElement
-//        }
-//    }
 }
 
 

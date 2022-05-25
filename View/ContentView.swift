@@ -25,19 +25,6 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-//            HStack{
-//                Spacer()
-//                Button(action: {
-//                    self.showModal.toggle()
-//                }, label: {
-//                    Image(systemName: "plus")
-//                        .foregroundColor(.black)
-//                })
-//                .sheet(isPresented: $showModal){
-//                    ModalAddDream(showModal: $showModal)
-//                }
-//                .padding()
-//            }
             TabView{
                 MainView()
                     .tabItem {
