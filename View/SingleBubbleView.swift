@@ -12,7 +12,7 @@ struct SingleBubbleView: View {
     @State var bubbleDiameter : CGFloat = 100.0
     @State var textSize : CGFloat = 14.0
     @State var offset: CGSize = .zero
-//    var bubble : Bubble
+    //    var bubble : Bubble
     var bubble : DreamElement
     
     func increaseBubble() {
@@ -38,12 +38,12 @@ struct SingleBubbleView: View {
     var body: some View {
         ZStack {
             Circle()
-                
+            
             Text(bubble.text!)
                 .font(.system(size: textSize))
                 .lineLimit(1)
-                
-                
+            
+            
         }
         .frame(width: bubbleDiameter)
         .offset(offset)
