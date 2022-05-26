@@ -32,9 +32,16 @@ struct RealityView: View {
     @State var is_Sound : Bool = false
     @State var is_Vibrate : Bool = false
     
-    @State var values_slider: Double = 0
+    @State var values_slider: Double = 0.0
+    @State var frequency_slider: Double = 0.0
     
     @State var ButtonDisabled: Bool = false
+    
+    let timer1 = ["8:00", "10:00"]
+    let timer2 = ["20:00", "22:00"]
+    
+    @State var selectedTime1 = "8:00"
+    @State var selectedTime2 = "20:00"
 
 
     let data = Array(1...4).map { "Item \($0)" }
@@ -42,6 +49,10 @@ struct RealityView: View {
         GridItem(.flexible(minimum: 2)),
         GridItem(.flexible(minimum: 2))
     ]
+    
+    @AppStorage("FREQUENCY_VALUES") var frequencySlider: Double = Double()
+    @AppStorage("FROM_VALUE") var selectedFrom: String = String()
+    @AppStorage("TO_VALUE") var selectedTo: String = String()
     
     
     var body: some View {
@@ -123,8 +134,42 @@ struct RealityView: View {
                                                 .frame(width: 50, height: 3)
                                                 .padding(10)
 
-                                            Text("Bitch")
+                                            Text("Reality Check Reminder")
                                                 .foregroundColor(.white)
+                                                .font(.title)
+                                            HStack{
+                                                VStack{
+                                                    Text("From")
+                                                        .foregroundColor(.white)
+                                                    Picker("Time", selection: $selectedTime1){
+                                                        ForEach(timer1, id: \.self){
+                                                            Text($0)
+                                                                .foregroundColor(.white)
+                                                        }
+                                                    }
+                                                    .pickerStyle(.wheel)
+                                                    .frame(width: 20, height: 20, alignment: .center)
+                                                    .foregroundColor(.white)
+                                                }
+                                                .padding()
+                                                Spacer()
+                                                VStack{
+                                                    Text("To")
+                                                        .foregroundColor(.white)
+                                                    Picker("Time", selection: $selectedTime2){
+                                                        ForEach(timer2, id: \.self){
+                                                            Text($0)
+                                                                .foregroundColor(.white)
+                                                        }
+                                                    }
+                                                    .pickerStyle(.wheel)
+                                                    .frame(width: 20, height: 20, alignment: .center)
+                                                    .foregroundColor(.white)
+
+                                                }
+                                                .padding()
+                                            }
+                                            Slider(value: $frequency_slider, in: 0...30)
                                             Spacer()
                                         }
                                     }
@@ -132,9 +177,15 @@ struct RealityView: View {
                                 .background(.black)
                                 .onAppear(){
                                     ButtonDisabled = true
+                                    selectedTime1 = selectedFrom
+                                    selectedTime2 = selectedTo
+                                    frequency_slider = frequencySlider
                                 }
                                 .onDisappear(){
                                     ButtonDisabled = false
+                                    selectedFrom = selectedTime1
+                                    selectedTo = selectedTime2
+                                    frequencySlider = frequency_slider
                                 }
                             }
                         }
