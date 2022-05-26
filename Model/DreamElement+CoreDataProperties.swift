@@ -2,7 +2,7 @@
 //  DreamElement+CoreDataProperties.swift
 //  TrangueellApp
 //
-//  Created by Alessandra De Matteo on 23/05/22.
+//  Created by Alessandra De Matteo on 26/05/22.
 //
 //
 
@@ -16,9 +16,10 @@ extension DreamElement {
         return NSFetchRequest<DreamElement>(entityName: "DreamElement")
     }
 
-    @NSManaged public var text: String?
-    @NSManaged public var date: Date?
     @NSManaged public var category: String?
+    @NSManaged public var date: Date?
+    @NSManaged public var text: String?
+    @NSManaged public var bubbleDiameter: Float
     @NSManaged public var isCollected: DreamCollection?
 
 }
