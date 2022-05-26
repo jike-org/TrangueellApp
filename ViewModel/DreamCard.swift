@@ -40,6 +40,7 @@ struct DreamCard: View {
             newDreamElement.text = text_field
             newDreamElement.date = Calendar.current.date(from: DateComponents())
             newDreamElement.bubbleDiameter = 100.0
+            newDreamElement.textSize = 14.0
             do {
                 try viewContext.save()
             } catch {

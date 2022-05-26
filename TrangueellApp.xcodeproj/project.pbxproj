@@ -218,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				45421E5D282DBED8001B400E /* Notification.swift */,
-				4461D266283D11D700574C6D /* DreamCard.swift */,
 				45421E56282DAF14001B400E /* ViewHome.swift */,
 				44DAB0D0282A910400156A9B /* ContentView.swift */,
 				4461D264283BE55500574C6D /* RealityViewMorning.swift */,
@@ -226,7 +225,6 @@
 				45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */,
 				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
 				45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */,
-				5817FA71283E60340082B900 /* SingleBubbleView.swift */,
 				5817FA73283E61020082B900 /* DreamSignView.swift */,
 				449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */,
 			);
@@ -236,6 +234,8 @@
 		45421E5B282DB453001B400E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4461D266283D11D700574C6D /* DreamCard.swift */,
+				5817FA71283E60340082B900 /* SingleBubbleView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
