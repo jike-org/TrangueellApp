@@ -15,6 +15,7 @@
 		44D2F5B4283FB676000E57BC /* DreamElement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2F5B0283FB676000E57BC /* DreamElement+CoreDataProperties.swift */; };
 		44D2F5B5283FB676000E57BC /* DreamCollection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2F5B1283FB676000E57BC /* DreamCollection+CoreDataClass.swift */; };
 		44D2F5B6283FB676000E57BC /* DreamCollection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2F5B2283FB676000E57BC /* DreamCollection+CoreDataProperties.swift */; };
+		44D2F5B8283FBEB6000E57BC /* FilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2F5B7283FBEB6000E57BC /* FilteredView.swift */; };
 		44DAB0CF282A910400156A9B /* TrangueellAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */; };
 		44DAB0D1282A910400156A9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DAB0D0282A910400156A9B /* ContentView.swift */; };
 		44DAB0D3282A910700156A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DAB0D2282A910700156A9B /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		44D2F5B0283FB676000E57BC /* DreamElement+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DreamElement+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		44D2F5B1283FB676000E57BC /* DreamCollection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DreamCollection+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44D2F5B2283FB676000E57BC /* DreamCollection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DreamCollection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44D2F5B7283FBEB6000E57BC /* FilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredView.swift; sourceTree = "<group>"; };
 		44DAB0CB282A910400156A9B /* TrangueellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrangueellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrangueellAppApp.swift; sourceTree = "<group>"; };
 		44DAB0D0282A910400156A9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
 				45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */,
 				5817FA71283E60340082B900 /* SingleBubbleView.swift */,
+				44D2F5B7283FBEB6000E57BC /* FilteredView.swift */,
 				5817FA73283E61020082B900 /* DreamSignView.swift */,
 				449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */,
 			);
@@ -438,6 +441,7 @@
 				45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */,
 				44986B3F282E8D49008703D7 /* RandomData.swift in Sources */,
 				5817FA72283E60340082B900 /* SingleBubbleView.swift in Sources */,
+				44D2F5B8283FBEB6000E57BC /* FilteredView.swift in Sources */,
 				C6D3097E283BDDD6006A08DE /* WidgetTrangueell.intentdefinition in Sources */,
 				45421E57282DAF14001B400E /* ViewHome.swift in Sources */,
 				4461D265283BE55500574C6D /* RealityViewMorning.swift in Sources */,
