@@ -8,16 +8,16 @@
 import Foundation
 import SwiftUI
 
-struct Notification {
+struct Notification2 {
     var title: String
     var text: String
 }
 
-var notif1 = Notification.init(title: "jughow", text: "hello hello hello")
-var notif2 = Notification.init(title: "RuPaul", text: "bye bye bye")
-var notif3 = Notification.init(title: "Lipsync for your life", text: "and don't fuck it up")
+var notif1 = Notification2.init(title: "jughow", text: "hello hello hello")
+var notif2 = Notification2.init(title: "RuPaul", text: "bye bye bye")
+var notif3 = Notification2.init(title: "Lipsync for your life", text: "and don't fuck it up")
 
-var notifications: [Notification] = [notif1, notif2, notif3]
+var notifications: [Notification2] = [notif1, notif2, notif3]
 
 struct Category : Hashable {
     var name: String

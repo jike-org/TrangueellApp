@@ -117,7 +117,6 @@ struct SingleBubbleView: View {
         .offset(offset)
         .onTapGesture(count: 2, perform:{decreaseBubble(bubble)})
         .onTapGesture(count: 1, perform:{increaseBubble(bubble)})
-        //        .position(x: .random(in: frameMinX+100...frameMaxX-100), y: .random(in: frameMinY+100...frameMaxY-100))
         .position(x: CGFloat(bubble.positionX), y: CGFloat(bubble.positionY))
         .gesture(
             DragGesture()
