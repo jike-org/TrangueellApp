@@ -8,12 +8,14 @@
         <attribute name="bubbleDiameter" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="positionX" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="positionY" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="textSize" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="isCollected" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DreamCollection" inverseName="collects" inverseEntity="DreamCollection"/>
     </entity>
     <elements>
         <element name="DreamCollection" positionX="-45" positionY="36" width="128" height="59"/>
-        <element name="DreamElement" positionX="-54" positionY="-9" width="128" height="119"/>
+        <element name="DreamElement" positionX="-54" positionY="-9" width="128" height="149"/>
     </elements>
 </model>

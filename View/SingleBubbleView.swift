@@ -9,9 +9,13 @@ import SwiftUI
 
 struct SingleBubbleView: View {
     
-    @State var offset: CGSize = .zero
-    //    var bubble : Bubble
     var bubble : DreamElement
+    @State var offset: CGSize = .zero
+    
+    //    @State private var location: CGPoint = CGPoint(x: .random(in: frameMinX+100...frameMaxX-100), y: .random(in: frameMinY+100...frameMaxY-100))
+    //    @State private var location: CGPoint = CGPoint(x: bubble.positionX, y: 100)
+    
+    
     
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -76,6 +80,21 @@ struct SingleBubbleView: View {
         }
     }
     
+    private func updateBubblePosition(_ item: DreamElement, x: Int, y: Int) {
+        if dreams.firstIndex(of: item) != nil {
+            do {
+                item.positionX = x
+                item.positionY = y
+                try viewContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
+    
     
     func bubbleConstraint() {
         
@@ -98,16 +117,21 @@ struct SingleBubbleView: View {
         .offset(offset)
         .onTapGesture(count: 2, perform:{decreaseBubble(bubble)})
         .onTapGesture(count: 1, perform:{increaseBubble(bubble)})
+        //        .position(x: .random(in: frameMinX+100...frameMaxX-100), y: .random(in: frameMinY+100...frameMaxY-100))
+        .position(x: CGFloat(bubble.positionX), y: CGFloat(bubble.positionY))
         .gesture(
             DragGesture()
                 .onChanged { value in
                     withAnimation(.spring()) {
                         offset = value.translation
+                        bubble.positionX = Int(value.location.x)
+                        bubble.positionY = Int(value.location.y)
                     }
                 }
                 .onEnded { value in
                     withAnimation(.spring()) {
                         offset = value.translation
+                        updateBubblePosition(bubble, x: Int(value.location.x), y: Int(value.location.y))
                     }
                 }
         )
