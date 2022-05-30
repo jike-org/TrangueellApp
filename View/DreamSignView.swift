@@ -25,7 +25,7 @@ struct DreamSignView : View {
     
     @State private var filteredCategory: Category = person
     
-    
+    @State private var showButtons = false
     
     let darkBlue = Color(red: 0.11, green: 0.11, blue: 0.39)
     let bubbleColor = Color (red: 0.65, green: 1.05, blue: 2.25)
@@ -54,19 +54,38 @@ struct DreamSignView : View {
            }
             VStack {
                 HStack {
-                    Button {
-                        if showNoFilter == true{
-                            showFilter = true
-                            showNoFilter = false
-                            filteredCategory = person
+                    VStack{
+                        Button {
+                            if showButtons == false{
+                                showButtons = true
+                            } else {
+                                showButtons = false
+                                showNoFilter = true
+                                showFilter = false
+                            }
+
+                        } label: {
+                            Image(systemName: "flag.fill")
+                                .foregroundColor(.white)
                         }
-                        else if showFilter == true {
-                            showFilter = false
-                            showNoFilter = true
+                        if showButtons == true{
+                            ForEach(categories, id:\.self){ category in
+                                Button {
+                                    if showNoFilter == true{
+                                        showFilter = true
+                                        showNoFilter = false
+                                        filteredCategory = category
+                                    } else if showNoFilter == false{
+                                        showFilter = false
+                                        showFilter = true
+                                        filteredCategory = category
+                                    }
+                                } label: {
+                                    Image(systemName: "\(category.icon)")
+                                        .foregroundColor(.white)
+                                }
+                            }
                         }
-                    } label: {
-                        Image(systemName: "person")
-                            .foregroundColor(.white)
                     }
                     .padding(.trailing, 30)
                     .padding(.top, 45)

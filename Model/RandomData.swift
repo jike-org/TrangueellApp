@@ -13,6 +13,10 @@ struct Notification {
     var text: String
 }
 
+struct Technique{
+    var title: String
+}
+
 var notif1 = Notification.init(title: "jughow", text: "hello hello hello")
 var notif2 = Notification.init(title: "RuPaul", text: "bye bye bye")
 var notif3 = Notification.init(title: "Lipsync for your life", text: "and don't fuck it up")
@@ -36,3 +40,8 @@ let frameMinX = UIScreen.main.bounds.minX
 let frameMaxX = UIScreen.main.bounds.maxX
 let frameMinY = UIScreen.main.bounds.minY
 let frameMaxY = UIScreen.main.bounds.maxY
+
+var mirror = Technique.init(title: "Mirror")
+var finger = Technique.init(title: "Finger")
+var phrase = Technique.init(title: "Phrase")
+var switchT = Technique.init(title: "Switch")

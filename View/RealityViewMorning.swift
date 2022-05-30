@@ -94,22 +94,79 @@ struct RealityView: View {
                         
                     )
                 
-                VStack(spacing: 100.0){
+                VStack(spacing: 60.0){
                     Text("Morning Reality Check")
                         .foregroundColor(.white)
                     Spacer()
 
-                    LazyVGrid(columns: layout, spacing: 0) {
-                        ForEach(data, id: \.self) { item in
-                            //insert card per bolla
-                            TechniqueView(isPresentedFullScreenCover: $isPresentedFullScreenCover)
-                                .fullScreenCover(isPresented: $isPresentedFullScreenCover) {
-                                    FullScreenModalView()
+                        Circle()
+                        .stroke(.white)
+                        .overlay(
+                            VStack(spacing: 5.0){
+                                Button {
+                                    
+                                } label: {
+                                    ZStack{
+                                        Circle()
+                                            .foregroundColor(.blue)
+                                            .frame(width: 75, height: 75)
+                                        Text("Hello")
+                                            .foregroundColor(.white)
+                                    }
+                                    .padding(.bottom, 50)
+           
                                 }
+                                Spacer()
+                                
+                                Circle()
+                                    .foregroundColor(.red)
+                                    .frame(width: 150, height: 150)
+                                    .padding(.bottom, 30)
+                                    
+                                
+                                Spacer()
+                                HStack(spacing: 150.0){
+                                    Spacer()
+                                    Button {
+                                        
+                                    } label: {
+                                        ZStack{
+                                            Circle()
+                                                .foregroundColor(.blue)
+                                                .frame(width: 75, height: 75)
+                                            Text("Hello")
+                                                .foregroundColor(.white)
+                                        }
+                                    }
+                                    
+                                                                        
+                                    Button {
+                                        
+                                    } label: {
+                                        ZStack{
+                                            Circle()
+                                                .foregroundColor(.blue)
+                                                .frame(width: 75, height: 75)
+                                            Text("Hello")
+                                                .foregroundColor(.white)
+                                        }
+                                    }
+                                    Spacer()
+                                    
+                                }
+
+                            }
+                        )
+                    
+                            //insert card per bolla
+//                            TechniqueView(isPresentedFullScreenCover: $isPresentedFullScreenCover)
+//                                .fullScreenCover(isPresented: $isPresentedFullScreenCover) {
+//                                    FullScreenModalView()
+//                                }
                             
-                        }.padding(.vertical, 40)
+//                        }.padding(.vertical, 40)
                         
-                    }
+                    
                     Spacer()
                 }.padding(.horizontal, 20)
                 .toolbar {

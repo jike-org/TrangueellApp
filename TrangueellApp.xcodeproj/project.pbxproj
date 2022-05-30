@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4461D265283BE55500574C6D /* RealityViewMorning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4461D264283BE55500574C6D /* RealityViewMorning.swift */; };
 		4461D267283D11D700574C6D /* DreamCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4461D266283D11D700574C6D /* DreamCard.swift */; };
+		44667F11283FD38A005FA430 /* SingleBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44667F10283FD38A005FA430 /* SingleBubbleView.swift */; };
 		44986B3F282E8D49008703D7 /* RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44986B3E282E8D49008703D7 /* RandomData.swift */; };
 		449BD8DD283E6FDB005AC7FC /* HalfModalMorning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */; };
 		44D2F5B3283FB676000E57BC /* DreamElement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2F5AF283FB676000E57BC /* DreamElement+CoreDataClass.swift */; };
@@ -31,7 +32,6 @@
 		4573679E283DA9DF001CE236 /* ModalViewNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573679D283DA9DF001CE236 /* ModalViewNight.swift */; };
 		45C498FC283D7E8500B0AA3C /* RealityViewNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */; };
 		45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */; };
-		5817FA72283E60340082B900 /* SingleBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817FA71283E60340082B900 /* SingleBubbleView.swift */; };
 		5817FA74283E61020082B900 /* DreamSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817FA73283E61020082B900 /* DreamSignView.swift */; };
 		C6D30973283BDDD5006A08DE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30972283BDDD5006A08DE /* WidgetKit.framework */; };
 		C6D30975283BDDD5006A08DE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30974283BDDD5006A08DE /* SwiftUI.framework */; };
@@ -83,6 +83,8 @@
 /* Begin PBXFileReference section */
 		4461D264283BE55500574C6D /* RealityViewMorning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityViewMorning.swift; sourceTree = "<group>"; };
 		4461D266283D11D700574C6D /* DreamCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamCard.swift; sourceTree = "<group>"; };
+		44667F10283FD38A005FA430 /* SingleBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleBubbleView.swift; sourceTree = "<group>"; };
+		44667F1428411C37005FA430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44986B3E282E8D49008703D7 /* RandomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
 		449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalMorning.swift; sourceTree = "<group>"; };
 		44D2F5AF283FB676000E57BC /* DreamElement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DreamElement+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -108,7 +110,6 @@
 		4573679D283DA9DF001CE236 /* ModalViewNight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewNight.swift; sourceTree = "<group>"; };
 		45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityViewNight.swift; sourceTree = "<group>"; };
 		45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueInfoView.swift; sourceTree = "<group>"; };
-		5817FA71283E60340082B900 /* SingleBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBubbleView.swift; sourceTree = "<group>"; };
 		5817FA73283E61020082B900 /* DreamSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSignView.swift; sourceTree = "<group>"; };
 		C6D30970283BDDD4006A08DE /* WidgetTrangueellExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetTrangueellExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D30972283BDDD5006A08DE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -182,6 +183,7 @@
 		44DAB0CD282A910400156A9B /* TrangueellApp */ = {
 			isa = PBXGroup;
 			children = (
+				44667F1428411C37005FA430 /* Info.plist */,
 				44DAB0CE282A910400156A9B /* TrangueellAppApp.swift */,
 				44DAB0D2282A910700156A9B /* Assets.xcassets */,
 				44DAB0D7282A910700156A9B /* Persistence.swift */,
@@ -227,7 +229,6 @@
 				45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */,
 				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
 				45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */,
-				5817FA71283E60340082B900 /* SingleBubbleView.swift */,
 				44D2F5B7283FBEB6000E57BC /* FilteredView.swift */,
 				5817FA73283E61020082B900 /* DreamSignView.swift */,
 				449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */,
@@ -238,8 +239,8 @@
 		45421E5B282DB453001B400E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				44667F10283FD38A005FA430 /* SingleBubbleView.swift */,
 				4461D266283D11D700574C6D /* DreamCard.swift */,
-				5817FA71283E60340082B900 /* SingleBubbleView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -437,11 +438,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44667F11283FD38A005FA430 /* SingleBubbleView.swift in Sources */,
 				449BD8DD283E6FDB005AC7FC /* HalfModalMorning.swift in Sources */,
 				44DAB0D8282A910700156A9B /* Persistence.swift in Sources */,
 				45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */,
 				44986B3F282E8D49008703D7 /* RandomData.swift in Sources */,
-				5817FA72283E60340082B900 /* SingleBubbleView.swift in Sources */,
 				44D2F5B8283FBEB6000E57BC /* FilteredView.swift in Sources */,
 				C6D3097E283BDDD6006A08DE /* WidgetTrangueell.intentdefinition in Sources */,
 				45421E57282DAF14001B400E /* ViewHome.swift in Sources */,
@@ -635,12 +636,13 @@
 				DEVELOPMENT_TEAM = 6LL88859YA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TrangueellApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -666,12 +668,13 @@
 				DEVELOPMENT_TEAM = 6LL88859YA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TrangueellApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
