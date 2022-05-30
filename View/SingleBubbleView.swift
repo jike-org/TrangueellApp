@@ -100,7 +100,7 @@ struct SingleBubbleView: View {
             Image("bubble")
                 .resizable()
             Text(bubble.text!)
-                .font(.system(size: CGFloat(bubble.textSize)))
+                .font(Font.custom("Avenir", size: CGFloat(bubble.textSize)))
                 .foregroundColor(.white)
                 .lineLimit(1)
         }

@@ -22,6 +22,7 @@ struct DreamCard: View {
         HStack{
             Image(category.icon)
             TextField(category.name, text: $text_field)
+                .foregroundColor(.white)
                 .onChange(of: text_field) { newValue in
                     if isCreated == false {
                         createdDream = addDreamElement()

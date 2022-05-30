@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ModalAddDream: View {
     
-    
+    @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) private var viewContext
     @Binding var showModal: Bool
     
@@ -18,7 +18,7 @@ struct ModalAddDream: View {
         animation: .default)
     
     private var dreams: FetchedResults<DreamElement>
-        
+    
     @State var disabled_button : Bool = true
     
     let dateFormatter = DateFormatter()
@@ -30,11 +30,37 @@ struct ModalAddDream: View {
     @State var showView5 = false
     
     @State var selectedCategory: Category = person
-
+    
     var body: some View {
         VStack {
+            HStack {
+                Button {
+                    
+                } label: {
+                    Text("Done")
+                        .foregroundColor(.clear)
+                }
+                Spacer()
+                
+                
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("Done")
+                        .foregroundColor(.white)
+                        .font(Font.custom("Avenir", size: 18))
+                        .fontWeight(.medium)
+                }
+                .buttonStyle(.plain)
+            }
+            .padding(15)
             Text("Add your Dream Element")
-                .padding()
+                .font(Font.custom("Avenir", size: 20))
+                .fontWeight(.heavy)
+                .foregroundColor(.white)
+
+            
+            .padding()
             HStack{
                 Spacer()
                 ForEach(categories, id: \.self) { category in
@@ -55,11 +81,13 @@ struct ModalAddDream: View {
                         if showView1 == false{
                             showView1 = true
                         }
-
+                        
                     } label: {
                         Image(category.icon)
+                            .resizable()
+                            .scaledToFit()
+                            .font(.system(size: 15))
                             .foregroundColor(.white)
-                            .font(.system(size: 50))
                             .padding(1)
                     }
                     
@@ -88,6 +116,7 @@ struct ModalAddDream: View {
                     .padding()
             }
             Spacer()
+            
         }
         .background(BackgroundView())
     }

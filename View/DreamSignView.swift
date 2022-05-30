@@ -55,6 +55,8 @@ struct DreamSignView : View {
             if showFilter == true && showNoFilter == false {
                 FilteredView(filter: filteredCategory)
             }
+            
+            
             VStack {
                 HStack {
                     VStack{
@@ -66,7 +68,7 @@ struct DreamSignView : View {
                                 showNoFilter = true
                                 showFilter = false
                             }
-                            
+
                         } label: {
                             Image("filterIcon")
                                 .foregroundColor(.white)
@@ -74,31 +76,31 @@ struct DreamSignView : View {
                         }
                         .padding(.leading, 30)
                         if showButtons == true{
-                            
+
+                            Rectangle()
+                                .size(width: 5, height: 50)
+                                .foregroundColor(Color.filterLine)
                             ForEach(categories, id:\.self){ category in
-                                ZStack{
-                                    Rectangle()
-                                        .size(width: 5, height: 50)
-                                        .foregroundColor(Color.filterLine)
-                                    Button {
-                                        if showNoFilter == true{
-                                            showFilter = true
-                                            showNoFilter = false
-                                            filteredCategory = category
-                                        } else if showNoFilter == false{
-                                            showFilter = false
-                                            showFilter = true
-                                            filteredCategory = category
-                                        }
-                                    } label: {
-                                        Image(category.icon)
-                                            .foregroundColor(.white)
-                                            .font(.system(size: 15))
-                                            .padding(.leading, 30)
+
+                                Button {
+                                    if showNoFilter == true{
+                                        showFilter = true
+                                        showNoFilter = false
+                                        filteredCategory = category
+                                    } else if showNoFilter == false{
+                                        showFilter = false
+                                        showFilter = true
+                                        filteredCategory = category
                                     }
+                                } label: {
+                                    Image(category.icon)
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 15))
+                                        .padding(.leading, 30)
                                 }
                             }
-                            
+
+
                         }
                     }
                     //                        .padding(.trailing, 30)
@@ -106,7 +108,7 @@ struct DreamSignView : View {
                     Spacer()
                     Group {
                         Button(action: {
-                            
+
                         }, label: {
                             Image(systemName: "info.circle")
                                 .foregroundColor(.white)
@@ -129,7 +131,10 @@ struct DreamSignView : View {
                 }
                 Spacer()
             }
+            
+            
         }
+        
         
         .drawingGroup(opaque: false, colorMode: .linear)
         
