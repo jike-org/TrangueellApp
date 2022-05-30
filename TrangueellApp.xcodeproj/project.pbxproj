@@ -33,6 +33,8 @@
 		45C498FC283D7E8500B0AA3C /* RealityViewNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */; };
 		45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */; };
 		5817FA74283E61020082B900 /* DreamSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817FA73283E61020082B900 /* DreamSignView.swift */; };
+		5820960C28410EC600232EFC /* ShakeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5820960B28410EC600232EFC /* ShakeGestureRecognizer.swift */; };
+		582C97F6283FD5B100466C62 /* SingleBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582C97F5283FD5B100466C62 /* SingleBubbleView.swift */; };
 		C6D30973283BDDD5006A08DE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30972283BDDD5006A08DE /* WidgetKit.framework */; };
 		C6D30975283BDDD5006A08DE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D30974283BDDD5006A08DE /* SwiftUI.framework */; };
 		C6D30978283BDDD5006A08DE /* WidgetTrangueell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D30977283BDDD5006A08DE /* WidgetTrangueell.swift */; };
@@ -111,6 +113,8 @@
 		45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityViewNight.swift; sourceTree = "<group>"; };
 		45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueInfoView.swift; sourceTree = "<group>"; };
 		5817FA73283E61020082B900 /* DreamSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSignView.swift; sourceTree = "<group>"; };
+		5820960B28410EC600232EFC /* ShakeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGestureRecognizer.swift; sourceTree = "<group>"; };
+		582C97F5283FD5B100466C62 /* SingleBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleBubbleView.swift; path = ../View/SingleBubbleView.swift; sourceTree = "<group>"; };
 		C6D30970283BDDD4006A08DE /* WidgetTrangueellExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetTrangueellExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D30972283BDDD5006A08DE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		C6D30974283BDDD5006A08DE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -241,6 +245,7 @@
 			children = (
 				44667F10283FD38A005FA430 /* SingleBubbleView.swift */,
 				4461D266283D11D700574C6D /* DreamCard.swift */,
+				582C97F5283FD5B100466C62 /* SingleBubbleView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				44D2F5B1283FB676000E57BC /* DreamCollection+CoreDataClass.swift */,
 				44D2F5AF283FB676000E57BC /* DreamElement+CoreDataClass.swift */,
 				44986B3E282E8D49008703D7 /* RandomData.swift */,
+				5820960B28410EC600232EFC /* ShakeGestureRecognizer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -438,10 +444,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44667F11283FD38A005FA430 /* SingleBubbleView.swift in Sources */,
+				582C97F6283FD5B100466C62 /* SingleBubbleView.swift in Sources */,
 				449BD8DD283E6FDB005AC7FC /* HalfModalMorning.swift in Sources */,
 				44DAB0D8282A910700156A9B /* Persistence.swift in Sources */,
 				45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */,
+				5820960C28410EC600232EFC /* ShakeGestureRecognizer.swift in Sources */,
 				44986B3F282E8D49008703D7 /* RandomData.swift in Sources */,
 				44D2F5B8283FBEB6000E57BC /* FilteredView.swift in Sources */,
 				C6D3097E283BDDD6006A08DE /* WidgetTrangueell.intentdefinition in Sources */,

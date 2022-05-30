@@ -23,9 +23,6 @@ struct FilteredView: View {
                     .speed (.random(in: 0.05...0.4))
                     .delay(.random (in: 0...1)), value: scale
                 )
-            
-            
-                .position(x: .random(in: frameMinX+100...frameMaxX-100), y: .random(in: frameMinY+100...frameMaxY-100))
         }
     }
     

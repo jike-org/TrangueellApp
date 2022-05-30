@@ -21,6 +21,8 @@ extension DreamElement {
     @NSManaged public var text: String?
     @NSManaged public var bubbleDiameter: Float
     @NSManaged public var textSize: Float
+    @NSManaged public var positionX: Int
+    @NSManaged public var positionY: Int
     @NSManaged public var isCollected: DreamCollection?
 
 }

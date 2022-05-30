@@ -42,11 +42,11 @@ struct DreamSignView : View {
                         .animation (Animation.spring (dampingFraction: 0.5)
                             .repeatForever()
                             .speed (.random(in: 0.05...0.4))
-                            .delay(.random (in: 0...1)), value: scale
-                        )
-                    
-                    
-                        .position(x: .random(in: frameMinX+100...frameMaxX-100), y: .random(in: frameMinY+100...frameMaxY-100))
+                            .delay(.random (in: 0...1)), value: scale)
+                        .onShake {
+                            
+                            print("Device shaken")
+                        }
                 }
             }
             if showFilter == true && showNoFilter == false {
