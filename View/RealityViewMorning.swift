@@ -42,6 +42,12 @@ struct RealityView: View {
     
     @State var selectedTime1 = "8:00"
     @State var selectedTime2 = "20:00"
+    
+    @State var selectedTechnique: Technique = mirror
+    @State var technique1: Technique = finger
+    @State var technique2: Technique = phrase
+    @State var technique3: Technique = switchT
+    @State var technique4: Technique = mirror
 
 
     let data = Array(1...4).map { "Item \($0)" }
@@ -104,13 +110,15 @@ struct RealityView: View {
                         .overlay(
                             VStack(spacing: 5.0){
                                 Button {
-                                    
+                                    selectedTechnique = technique1
+                                    technique1 = technique4
+                                    technique4 = selectedTechnique
                                 } label: {
                                     ZStack{
                                         Circle()
                                             .foregroundColor(.blue)
                                             .frame(width: 75, height: 75)
-                                        Text("Hello")
+                                        Text("\(technique1.title)")
                                             .foregroundColor(.white)
                                     }
                                     .padding(.bottom, 50)
@@ -118,36 +126,43 @@ struct RealityView: View {
                                 }
                                 Spacer()
                                 
-                                Circle()
-                                    .foregroundColor(.red)
-                                    .frame(width: 150, height: 150)
-                                    .padding(.bottom, 30)
-                                    
+                                ZStack {
+                                    Circle()
+                                        .foregroundColor(.red)
+                                        .frame(width: 150, height: 150)
+                                        .padding(.bottom, 30)
+                                    Text("\(selectedTechnique.title)")
+                                        .foregroundColor(.white)
+                                }
                                 
                                 Spacer()
                                 HStack(spacing: 150.0){
                                     Spacer()
                                     Button {
-                                        
+                                        selectedTechnique = technique2
+                                        technique2 = technique4
+                                        technique4 = selectedTechnique
                                     } label: {
                                         ZStack{
                                             Circle()
                                                 .foregroundColor(.blue)
                                                 .frame(width: 75, height: 75)
-                                            Text("Hello")
+                                            Text("\(technique2.title)")
                                                 .foregroundColor(.white)
                                         }
                                     }
                                     
                                                                         
                                     Button {
-                                        
+                                        selectedTechnique = technique3
+                                        technique3 = technique4
+                                        technique4 = selectedTechnique
                                     } label: {
                                         ZStack{
                                             Circle()
                                                 .foregroundColor(.blue)
                                                 .frame(width: 75, height: 75)
-                                            Text("Hello")
+                                            Text("\(technique3.title)")
                                                 .foregroundColor(.white)
                                         }
                                     }

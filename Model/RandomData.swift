@@ -13,6 +13,10 @@ struct Notification2 {
     var text: String
 }
 
+struct Technique {
+    var title : String
+}
+
 var notif1 = Notification2.init(title: "jughow", text: "hello hello hello")
 var notif2 = Notification2.init(title: "RuPaul", text: "bye bye bye")
 var notif3 = Notification2.init(title: "Lipsync for your life", text: "and don't fuck it up")
@@ -41,3 +45,4 @@ var mirror = Technique.init(title: "Mirror")
 var finger = Technique.init(title: "Finger")
 var phrase = Technique.init(title: "Phrase")
 var switchT = Technique.init(title: "Switch")
+
