@@ -29,10 +29,10 @@ struct Category : Hashable {
 }
 
 var person = Category.init(name: "person", icon: "person")
-var animal = Category.init(name: "animal", icon: "pawprint")
-var object = Category.init(name: "object", icon: "puzzlepiece")
-var place = Category.init(name: "place", icon: "map")
-var action = Category.init(name: "action", icon: "person.and.arrow.left.and.arrow.right")
+var animal = Category.init(name: "animal", icon: "animal")
+var object = Category.init(name: "object", icon: "object")
+var place = Category.init(name: "place", icon: "place")
+var action = Category.init(name: "action", icon: "action")
 
 var categories = [person, animal, object, place, action]
 
@@ -46,3 +46,9 @@ var finger = Technique.init(title: "Finger")
 var phrase = Technique.init(title: "Phrase")
 var switchT = Technique.init(title: "Switch")
 
+extension Color {
+    static let customBG1 = Color("customBG1")
+    static let customBG2 = Color("customBG2")
+    static let customBG3 = Color("customBG3")
+    static let filterLine = Color("filterLine")
+}

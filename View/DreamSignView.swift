@@ -33,46 +33,53 @@ struct DreamSignView : View {
     let bubbleColor = Color (red: 0.65, green: 1.05, blue: 2.25)
     var body: some View {
         
-//        VStack {
-            ZStack {
-                if showFilter == false && showNoFilter == true{
-                    ForEach (dreams) { bubble in
-                        
-                        SingleBubbleView(bubble: bubble)
-                        
-                            .blendMode(.colorDodge) // The bottom circle is lightened by an amount determined by the top layer
-                            .animation (Animation.spring (dampingFraction: 0.5)
-                                .repeatForever()
-                                .speed (.random(in: 0.05...0.4))
-                                .delay(.random (in: 0...1)), value: scale)
-                            .onShake {
-                                
-                                print("Device shaken")
-                            }
-                    }
+        //        VStack {
+        ZStack {
+            if showFilter == false && showNoFilter == true{
+                ForEach (dreams) { bubble in
                     
+                    SingleBubbleView(bubble: bubble)
+                    
+                        .blendMode(.colorDodge) // The bottom circle is lightened by an amount determined by the top layer
+                        .animation (Animation.spring (dampingFraction: 0.5)
+                            .repeatForever()
+                            .speed (.random(in: 0.05...0.4))
+                            .delay(.random (in: 0...1)), value: scale)
+                        .onShake {
+                            
+                            print("Device shaken")
+                        }
                 }
-                if showFilter == true && showNoFilter == false {
-                    FilteredView(filter: filteredCategory)
-                }
-                VStack {
-                    HStack {
-                        VStack{
-                            Button {
-                                if showButtons == false{
-                                    showButtons = true
-                                } else {
-                                    showButtons = false
-                                    showNoFilter = true
-                                    showFilter = false
-                                }
-                                
-                            } label: {
-                                Image(systemName: "flag.fill")
-                                    .foregroundColor(.white)
+                
+            }
+            if showFilter == true && showNoFilter == false {
+                FilteredView(filter: filteredCategory)
+            }
+            VStack {
+                HStack {
+                    VStack{
+                        Button {
+                            if showButtons == false{
+                                showButtons = true
+                            } else {
+                                showButtons = false
+                                showNoFilter = true
+                                showFilter = false
                             }
-                            if showButtons == true{
-                                ForEach(categories, id:\.self){ category in
+                            
+                        } label: {
+                            Image("filterIcon")
+                                .foregroundColor(.white)
+                                .font(.system(size: 20))
+                        }
+                        .padding(.leading, 30)
+                        if showButtons == true{
+                            
+                            ForEach(categories, id:\.self){ category in
+                                ZStack{
+                                    Rectangle()
+                                        .size(width: 5, height: 50)
+                                        .foregroundColor(Color.filterLine)
                                     Button {
                                         if showNoFilter == true{
                                             showFilter = true
@@ -84,47 +91,54 @@ struct DreamSignView : View {
                                             filteredCategory = category
                                         }
                                     } label: {
-                                        Image(systemName: "\(category.icon)")
+                                        Image(category.icon)
                                             .foregroundColor(.white)
+                                            .font(.system(size: 15))
+                                            .padding(.leading, 30)
                                     }
                                 }
                             }
+                            
                         }
-                        .padding(.trailing, 30)
-                        .padding(.top, 45)
-                        Spacer()
+                    }
+                    //                        .padding(.trailing, 30)
+                    .padding(.top, 45)
+                    Spacer()
+                    Group {
+                        Button(action: {
+                            
+                        }, label: {
+                            Image(systemName: "info.circle")
+                                .foregroundColor(.white)
+                                .font(.system(size: 25))
+                        })
+                        .padding(.trailing, 10)
                         Button(action: {
                             self.showModal.toggle()
                         }, label: {
                             Image(systemName: "plus")
                                 .foregroundColor(.white)
+                                .font(.system(size: 25))
                         })
                         .sheet(isPresented: $showModal){
                             ModalAddDream(showModal: $showModal)
                         }
                         .padding(.trailing, 30)
-                        .padding(.top, 45)
                     }
-                    Spacer()
+                    .padding(.top, 45)
                 }
-                .scaleEffect(scale)
-                        .gesture(MagnificationGesture()
-                            .updating($scale, body: { (value, scale, trans) in
-                                scale = value.magnitude
-                            })
-                    )
+                Spacer()
             }
-            
-            .drawingGroup(opaque: false, colorMode: .linear)
+        }
         
-            .background(
-                Rectangle()
-                    .foregroundColor(darkBlue))
-            
-            .ignoresSafeArea()
-            
-//        }
-      
+        .drawingGroup(opaque: false, colorMode: .linear)
+        
+        .background(BackgroundView())
+        
+        .ignoresSafeArea()
+        
+        //        }
+        
     }
     
     

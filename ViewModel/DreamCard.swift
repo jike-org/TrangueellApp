@@ -20,8 +20,8 @@ struct DreamCard: View {
             
     var body: some View{
         HStack{
-            Image(systemName: category.icon)
-            TextField("\(category.name)", text: $text_field)
+            Image(category.icon)
+            TextField(category.name, text: $text_field)
                 .onChange(of: text_field) { newValue in
                     if isCreated == false {
                         createdDream = addDreamElement()

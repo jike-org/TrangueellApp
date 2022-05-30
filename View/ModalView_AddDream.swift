@@ -57,10 +57,13 @@ struct ModalAddDream: View {
                         }
 
                     } label: {
-                        Image(systemName: category.icon)
-                            .foregroundColor(.black)
+                        Image(category.icon)
+                            .foregroundColor(.white)
+                            .font(.system(size: 50))
                             .padding(1)
                     }
+                    
+                    
                 }
                 Spacer()
             }
@@ -86,6 +89,7 @@ struct ModalAddDream: View {
             }
             Spacer()
         }
+        .background(BackgroundView())
     }
 }
 

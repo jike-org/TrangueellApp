@@ -35,6 +35,7 @@
 		5817FA74283E61020082B900 /* DreamSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817FA73283E61020082B900 /* DreamSignView.swift */; };
 		5820960C28410EC600232EFC /* ShakeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5820960B28410EC600232EFC /* ShakeGestureRecognizer.swift */; };
 		582C97F6283FD5B100466C62 /* SingleBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582C97F5283FD5B100466C62 /* SingleBubbleView.swift */; };
+		58BC7C9628454351007706A2 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7C9528454351007706A2 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		5817FA73283E61020082B900 /* DreamSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSignView.swift; sourceTree = "<group>"; };
 		5820960B28410EC600232EFC /* ShakeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGestureRecognizer.swift; sourceTree = "<group>"; };
 		582C97F5283FD5B100466C62 /* SingleBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleBubbleView.swift; path = ../View/SingleBubbleView.swift; sourceTree = "<group>"; };
+		58BC7C9528454351007706A2 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */,
 				45421E56282DAF14001B400E /* ViewHome.swift */,
 				447D4C6428451662009A4B19 /* AreUDreamingView.swift */,
+				58BC7C9528454351007706A2 /* BackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				45421E5E282DBED8001B400E /* Notification.swift in Sources */,
 				4461D267283D11D700574C6D /* DreamCard.swift in Sources */,
 				5817FA74283E61020082B900 /* DreamSignView.swift in Sources */,
+				58BC7C9628454351007706A2 /* BackgroundView.swift in Sources */,
 				44D2F5B6283FB676000E57BC /* DreamCollection+CoreDataProperties.swift in Sources */,
 				45C498FC283D7E8500B0AA3C /* RealityViewNight.swift in Sources */,
 				44D2F5B3283FB676000E57BC /* DreamElement+CoreDataClass.swift in Sources */,

@@ -28,14 +28,17 @@ struct ContentView: View {
             TabView{
                 DreamSignView()
                     .tabItem {
-                        Label("First Screen", systemImage: "tag")
+                        Text("")
+                        Image("dreamSignTab").renderingMode(.template)
                     }
                 RealityView()
                     .tabItem {
-                        Label("Reality Screen", systemImage: "eye")
+                        Text("")
+                        Image("realityCheckTab").renderingMode(.template)
                     }
             }.accentColor(.white)
         }
+        .background(BackgroundView())
     }
 }
         

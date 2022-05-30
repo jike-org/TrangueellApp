@@ -48,8 +48,8 @@ struct RealityView: View {
     @State var technique2: Technique = phrase
     @State var technique3: Technique = switchT
     @State var technique4: Technique = mirror
-
-
+    
+    
     let data = Array(1...4).map { "Item \($0)" }
     let layout = [
         GridItem(.flexible(minimum: 2)),
@@ -70,8 +70,8 @@ struct RealityView: View {
                     .overlay(
                         ZStack{
                             
-                                                Rectangle()
-                           
+                            Rectangle()
+                            
                                 .frame(width: 100, height: 50)
                                 .foregroundColor(.red)
                                 .cornerRadius(20)
@@ -104,8 +104,8 @@ struct RealityView: View {
                     Text("Morning Reality Check")
                         .foregroundColor(.white)
                     Spacer()
-
-                        Circle()
+                    
+                    Circle()
                         .stroke(.white)
                         .overlay(
                             VStack(spacing: 5.0){
@@ -122,7 +122,7 @@ struct RealityView: View {
                                             .foregroundColor(.white)
                                     }
                                     .padding(.bottom, 50)
-           
+                                    
                                 }
                                 Spacer()
                                 
@@ -152,7 +152,7 @@ struct RealityView: View {
                                         }
                                     }
                                     
-                                                                        
+                                    
                                     Button {
                                         selectedTechnique = technique3
                                         technique3 = technique4
@@ -169,100 +169,100 @@ struct RealityView: View {
                                     Spacer()
                                     
                                 }
-
+                                
                             }
                         )
                     
-                            //insert card per bolla
-//                            TechniqueView(isPresentedFullScreenCover: $isPresentedFullScreenCover)
-//                                .fullScreenCover(isPresented: $isPresentedFullScreenCover) {
-//                                    FullScreenModalView()
-//                                }
-                            
-//                        }.padding(.vertical, 40)
-                        
+                    //insert card per bolla
+                    //                            TechniqueView(isPresentedFullScreenCover: $isPresentedFullScreenCover)
+                    //                                .fullScreenCover(isPresented: $isPresentedFullScreenCover) {
+                    //                                    FullScreenModalView()
+                    //                                }
+                    
+                    //                        }.padding(.vertical, 40)
+                    
                     
                     Spacer()
                 }.padding(.horizontal, 20)
-                .toolbar {
-                    ToolbarItem {
-                        Button {
-                            self.showModal_settings.toggle()
-                        } label: {
-                            Label("Add Item", systemImage: "gear")
-                                .foregroundColor(.white)
-                        }.sheet(isPresented: $showModal_settings){
-                            if is_Moon {
-                                ModalViewNight(is_Sound: $is_Sound, is_Vibrate: $is_Vibrate, values_slider: $values_slider)
-                            }
-                            else if is_Sun {
-                                HalfSheet{
-                                    ZStack{
-                                        Color.black
-                                            .ignoresSafeArea()
-                                        VStack {
-                                            Capsule()
-                                                .fill(Color.white)
-                                                .frame(width: 50, height: 3)
-                                                .padding(10)
-
-                                            Text("Reality Check Reminder")
-                                                .foregroundColor(.white)
-                                                .font(.title)
-                                            HStack{
-                                                VStack{
-                                                    Text("From")
-                                                        .foregroundColor(.white)
-                                                    Picker("Time", selection: $selectedTime1){
-                                                        ForEach(timer1, id: \.self){
-                                                            Text($0)
-                                                                .foregroundColor(.white)
-                                                        }
-                                                    }
-                                                    .pickerStyle(.wheel)
-                                                    .frame(width: 20, height: 20, alignment: .center)
+                    .toolbar {
+                        ToolbarItem {
+                            Button {
+                                self.showModal_settings.toggle()
+                            } label: {
+                                Label("Add Item", systemImage: "gear")
+                                    .foregroundColor(.white)
+                            }.sheet(isPresented: $showModal_settings){
+                                if is_Moon {
+                                    ModalViewNight(is_Sound: $is_Sound, is_Vibrate: $is_Vibrate, values_slider: $values_slider)
+                                }
+                                else if is_Sun {
+                                    HalfSheet{
+                                        ZStack{
+                                            Color.black
+                                                .ignoresSafeArea()
+                                            VStack {
+                                                Capsule()
+                                                    .fill(Color.white)
+                                                    .frame(width: 50, height: 3)
+                                                    .padding(10)
+                                                
+                                                Text("Reality Check Reminder")
                                                     .foregroundColor(.white)
+                                                    .font(.title)
+                                                HStack{
+                                                    VStack{
+                                                        Text("From")
+                                                            .foregroundColor(.white)
+                                                        Picker("Time", selection: $selectedTime1){
+                                                            ForEach(timer1, id: \.self){
+                                                                Text($0)
+                                                                    .foregroundColor(.white)
+                                                            }
+                                                        }
+                                                        .pickerStyle(.wheel)
+                                                        .frame(width: 20, height: 20, alignment: .center)
+                                                        .foregroundColor(.white)
+                                                    }
+                                                    .padding()
+                                                    Spacer()
+                                                    VStack{
+                                                        Text("To")
+                                                            .foregroundColor(.white)
+                                                        Picker("Time", selection: $selectedTime2){
+                                                            ForEach(timer2, id: \.self){
+                                                                Text($0)
+                                                                    .foregroundColor(.white)
+                                                            }
+                                                        }
+                                                        .pickerStyle(.wheel)
+                                                        .frame(width: 20, height: 20, alignment: .center)
+                                                        .foregroundColor(.white)
+                                                        
+                                                    }
+                                                    .padding()
                                                 }
-                                                .padding()
+                                                Slider(value: $frequency_slider, in: 0...30)
                                                 Spacer()
-                                                VStack{
-                                                    Text("To")
-                                                        .foregroundColor(.white)
-                                                    Picker("Time", selection: $selectedTime2){
-                                                        ForEach(timer2, id: \.self){
-                                                            Text($0)
-                                                                .foregroundColor(.white)
-                                                        }
-                                                    }
-                                                    .pickerStyle(.wheel)
-                                                    .frame(width: 20, height: 20, alignment: .center)
-                                                    .foregroundColor(.white)
-
-                                                }
-                                                .padding()
                                             }
-                                            Slider(value: $frequency_slider, in: 0...30)
-                                            Spacer()
                                         }
                                     }
-                                }
-                                .background(.black)
-                                .onAppear(){
-                                    ButtonDisabled = true
-                                    selectedTime1 = selectedFrom
-                                    selectedTime2 = selectedTo
-                                    frequency_slider = frequencySlider
-                                }
-                                .onDisappear(){
-                                    ButtonDisabled = false
-                                    selectedFrom = selectedTime1
-                                    selectedTo = selectedTime2
-                                    frequencySlider = frequency_slider
+                                    .background(.black)
+                                    .onAppear(){
+                                        ButtonDisabled = true
+                                        selectedTime1 = selectedFrom
+                                        selectedTime2 = selectedTo
+                                        frequency_slider = frequencySlider
+                                    }
+                                    .onDisappear(){
+                                        ButtonDisabled = false
+                                        selectedFrom = selectedTime1
+                                        selectedTo = selectedTime2
+                                        frequencySlider = frequency_slider
+                                    }
                                 }
                             }
                         }
                     }
-            }
                 if showHome {
                     RealityView2(is_Moon: $is_Moon, is_Sun: $is_Sun)
                 }
@@ -304,6 +304,7 @@ struct RealityView: View {
             //                    }
             
         }.navigationBarHidden(true)
+            .background(BackgroundView())
         
     }
 }
