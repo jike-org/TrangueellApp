@@ -69,7 +69,6 @@
 /* Begin PBXFileReference section */
 		4461D264283BE55500574C6D /* RealityViewMorning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityViewMorning.swift; sourceTree = "<group>"; };
 		4461D266283D11D700574C6D /* DreamCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamCard.swift; sourceTree = "<group>"; };
-		44667F10283FD38A005FA430 /* SingleBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleBubbleView.swift; sourceTree = "<group>"; };
 		44667F1428411C37005FA430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44986B3E282E8D49008703D7 /* RandomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
 		449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalMorning.swift; sourceTree = "<group>"; };
@@ -208,7 +207,6 @@
 		45421E5B282DB453001B400E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				44667F10283FD38A005FA430 /* SingleBubbleView.swift */,
 				4461D266283D11D700574C6D /* DreamCard.swift */,
 				582C97F5283FD5B100466C62 /* SingleBubbleView.swift */,
 			);
