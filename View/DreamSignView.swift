@@ -68,47 +68,54 @@ struct DreamSignView : View {
                                 showNoFilter = true
                                 showFilter = false
                             }
-
+                            
                         } label: {
                             Image("filterIcon")
                                 .foregroundColor(.white)
                                 .font(.system(size: 20))
                         }
+                        .padding(.top, 45)
                         .padding(.leading, 30)
                         if showButtons == true{
-
-                            Rectangle()
-                                .size(width: 5, height: 50)
-                                .foregroundColor(Color.filterLine)
+                            
                             ForEach(categories, id:\.self){ category in
-
-                                Button {
-                                    if showNoFilter == true{
-                                        showFilter = true
-                                        showNoFilter = false
-                                        filteredCategory = category
-                                    } else if showNoFilter == false{
-                                        showFilter = false
-                                        showFilter = true
-                                        filteredCategory = category
+                                ZStack {
+                                    
+                                    //                                    Rectangle()
+                                    //                                        .frame(width: 3, height: 40)
+                                    //                                        .foregroundColor(Color.filterLine)
+                                    //                                        .padding(.leading, 30)
+                                    
+                                    Button {
+                                        if showNoFilter == true{
+                                            showFilter = true
+                                            showNoFilter = false
+                                            filteredCategory = category
+                                        } else if showNoFilter == false{
+                                            showFilter = false
+                                            showFilter = true
+                                            filteredCategory = category
+                                        }
+                                    } label: {
+                                        Image(category.icon)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 40)
+                                            .foregroundColor(.white)
+                                            .padding(.leading, 30)
                                     }
-                                } label: {
-                                    Image(category.icon)
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 15))
-                                        .padding(.leading, 30)
                                 }
                             }
-
-
+                            
+                            
                         }
                     }
                     //                        .padding(.trailing, 30)
-                    .padding(.top, 45)
+                    
                     Spacer()
                     Group {
                         Button(action: {
-
+                            
                         }, label: {
                             Image(systemName: "info.circle")
                                 .foregroundColor(.white)

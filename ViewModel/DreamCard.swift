@@ -21,6 +21,9 @@ struct DreamCard: View {
     var body: some View{
         HStack{
             Image(category.icon)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 65)
             TextField(category.name, text: $text_field)
                 .foregroundColor(.white)
                 .onChange(of: text_field) { newValue in
