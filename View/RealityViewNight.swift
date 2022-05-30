@@ -33,62 +33,64 @@ struct RealityView2: View {
     
     var body: some View {
         
-        ZStack{
-            Color.black
-//                .clipShape(LiquidSwipe2(offset: offset))
-                .ignoresSafeArea()
-                .overlay(
-                    ZStack{
-                        
-                    Rectangle()
-                        .frame(width: 100, height: 50)
-                        .foregroundColor(.red)
-                        .cornerRadius(20)
-                    Image(systemName: "moon")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .frame(width: 50, height: 50)
-                        .padding(.leading, 30)
-                        .contentShape(Circle())
-                        .onTapGesture {
-                            withAnimation(.spring()) {
-                                let screen = UIScreen.main.bounds
-                                offset.width = screen.height
-                                if offset.width > screen.width / 2 {
-                                    offset.width = -screen.height + 10
+        NavigationView{
+            ZStack{
+                Color.black
+    //                .clipShape(LiquidSwipe2(offset: offset))
+                    .ignoresSafeArea()
+                    .overlay(
+                        ZStack{
+                            
+                        Rectangle()
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.red)
+                            .cornerRadius(20)
+                        Image(systemName: "moon")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                            .frame(width: 50, height: 50)
+                            .padding(.leading, 30)
+                            .contentShape(Circle())
+                            .onTapGesture {
+                                withAnimation(.spring()) {
+                                    let screen = UIScreen.main.bounds
+                                    offset.width = screen.height
+                                    if offset.width > screen.width / 2 {
+                                        offset.width = -screen.height + 10
+                                    }
+                                    is_Sun = true
+                                    is_Moon = false
+                                    showHome.toggle()
+                                    
                                 }
-                                is_Sun = true
-                                is_Moon = false
-                                showHome.toggle()
-                                
                             }
                         }
-                    }
-                    .offset(x: -20, y: 80)
-                   .opacity(offset == .zero ? 1 : 0), alignment: .topLeading
-                        
-                )
-            
-            VStack(spacing: 0){
-                Text("Night Reality Check")
-                    .foregroundColor(.white)
-                Spacer()
+                        .offset(x: -20, y: 80)
+                       .opacity(offset == .zero ? 1 : 0), alignment: .topLeading
+                            
+                    )
                 
-                ForEach(data, id: \.self) { item in
-                    //insert card per bolla
-                    Text("\(item)")
+                VStack(spacing: 0){
+                    Text("Night Reality Check")
                         .foregroundColor(.white)
-                    
-                }.padding(.vertical, 40)
-                
-                
                     Spacer()
-                }.padding(.horizontal, 20)
-            
-            if showHome {
-                RealityView()
+                    
+                    ForEach(data, id: \.self) { item in
+                        //insert card per bolla
+                        Text("\(item)")
+                            .foregroundColor(.white)
+                        
+                    }.padding(.vertical, 40)
+                    
+                    
+                        Spacer()
+                    NavigationLink("Start", destination: AreUDreamingView())
+                    }.padding(.horizontal, 20)
+                
+                if showHome {
+                    RealityView()
+                }
             }
-
         }
     }
 
