@@ -52,3 +52,16 @@ extension Color {
     static let customBG3 = Color("customBG3")
     static let filterLine = Color("filterLine")
 }
+
+struct Info : Hashable {
+    var title : String
+    var description : String
+}
+
+var tapInfo = Info.init(title: "Tap", description: "on the bubble to increase its size")
+var doubleTapInfo = Info.init(title: "Double-Tap", description: "on the bubble to decrease its size")
+var shakeInfo = Info.init(title: "Shake", description: "the phone to randomly group bubbles")
+var dragInfo = Info.init(title: "Drag", description: "the bubble to move it around.")
+var pinchInfo = Info.init(title: "Pinch", description: "to zoom in&out")
+
+var infoList = [tapInfo, doubleTapInfo, shakeInfo, dragInfo, pinchInfo]

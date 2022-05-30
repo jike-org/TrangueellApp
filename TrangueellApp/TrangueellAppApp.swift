@@ -13,8 +13,7 @@ struct TrangueellAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ContentView().preferredColorScheme(.dark).environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

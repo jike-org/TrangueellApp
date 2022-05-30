@@ -36,6 +36,8 @@
 		5820960C28410EC600232EFC /* ShakeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5820960B28410EC600232EFC /* ShakeGestureRecognizer.swift */; };
 		582C97F6283FD5B100466C62 /* SingleBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582C97F5283FD5B100466C62 /* SingleBubbleView.swift */; };
 		58BC7C9628454351007706A2 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7C9528454351007706A2 /* BackgroundView.swift */; };
+		58BC7C9828457AB9007706A2 /* InfoOvalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7C9728457AB8007706A2 /* InfoOvalView.swift */; };
+		58BC7C9A28457DC0007706A2 /* InfoModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7C9928457DC0007706A2 /* InfoModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		5820960B28410EC600232EFC /* ShakeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGestureRecognizer.swift; sourceTree = "<group>"; };
 		582C97F5283FD5B100466C62 /* SingleBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleBubbleView.swift; path = ../View/SingleBubbleView.swift; sourceTree = "<group>"; };
 		58BC7C9528454351007706A2 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		58BC7C9728457AB8007706A2 /* InfoOvalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOvalView.swift; sourceTree = "<group>"; };
+		58BC7C9928457DC0007706A2 /* InfoModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,7 @@
 				44D2F5B7283FBEB6000E57BC /* FilteredView.swift */,
 				45421E5D282DBED8001B400E /* Notification.swift */,
 				449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */,
+				58BC7C9928457DC0007706A2 /* InfoModalView.swift */,
 				4573679D283DA9DF001CE236 /* ModalViewNight.swift */,
 				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
 				4461D264283BE55500574C6D /* RealityViewMorning.swift */,
@@ -214,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				4461D266283D11D700574C6D /* DreamCard.swift */,
+				58BC7C9728457AB8007706A2 /* InfoOvalView.swift */,
 				582C97F5283FD5B100466C62 /* SingleBubbleView.swift */,
 			);
 			path = ViewModel;
@@ -369,6 +375,7 @@
 				447D4C6528451662009A4B19 /* AreUDreamingView.swift in Sources */,
 				45C498FE283D90E300B0AA3C /* TechniqueInfoView.swift in Sources */,
 				5820960C28410EC600232EFC /* ShakeGestureRecognizer.swift in Sources */,
+				58BC7C9828457AB9007706A2 /* InfoOvalView.swift in Sources */,
 				44986B3F282E8D49008703D7 /* RandomData.swift in Sources */,
 				44D2F5B8283FBEB6000E57BC /* FilteredView.swift in Sources */,
 				45421E57282DAF14001B400E /* ViewHome.swift in Sources */,
@@ -378,6 +385,7 @@
 				44DAB102282AB8C100156A9B /* ModalView_AddDream.swift in Sources */,
 				44DAB0DB282A910700156A9B /* TrangueellApp.xcdatamodeld in Sources */,
 				4573679E283DA9DF001CE236 /* ModalViewNight.swift in Sources */,
+				58BC7C9A28457DC0007706A2 /* InfoModalView.swift in Sources */,
 				45421E5E282DBED8001B400E /* Notification.swift in Sources */,
 				4461D267283D11D700574C6D /* DreamCard.swift in Sources */,
 				5817FA74283E61020082B900 /* DreamSignView.swift in Sources */,

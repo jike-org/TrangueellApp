@@ -19,6 +19,7 @@ struct DreamSignView : View {
     
     
     @State private var showModal = false
+    @State private var showInfo = false
     
     @State private var showNoFilter = true
     @State private var showFilter = false
@@ -115,12 +116,15 @@ struct DreamSignView : View {
                     Spacer()
                     Group {
                         Button(action: {
-                            
+                            self.showInfo.toggle()
                         }, label: {
                             Image(systemName: "info.circle")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))
                         })
+                        .sheet(isPresented: $showInfo) {
+                            InfoModalView(showInfo: $showInfo)
+                        }
                         .padding(.trailing, 10)
                         Button(action: {
                             self.showModal.toggle()
