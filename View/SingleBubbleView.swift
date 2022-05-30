@@ -12,11 +12,6 @@ struct SingleBubbleView: View {
     var bubble : DreamElement
     @State var offset: CGSize = .zero
     
-    //    @State private var location: CGPoint = CGPoint(x: .random(in: frameMinX+100...frameMaxX-100), y: .random(in: frameMinY+100...frameMaxY-100))
-    //    @State private var location: CGPoint = CGPoint(x: bubble.positionX, y: 100)
-    
-    
-    
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
@@ -102,16 +97,12 @@ struct SingleBubbleView: View {
     
     var body: some View {
         ZStack {
-            //            Circle()
             Image("bubble")
                 .resizable()
-            
             Text(bubble.text!)
                 .font(.system(size: CGFloat(bubble.textSize)))
                 .foregroundColor(.white)
                 .lineLimit(1)
-            
-            
         }
         .frame(width: CGFloat(bubble.bubbleDiameter), height: CGFloat(bubble.bubbleDiameter))
         .offset(offset)
@@ -132,7 +123,6 @@ struct SingleBubbleView: View {
                         offset = value.translation
                         updateBubblePosition(bubble, x: Int(value.location.x), y: Int(value.location.y))
                     }
-                }
-        )
+                })
     }
 }

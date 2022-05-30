@@ -189,17 +189,17 @@
 		45421E5A282DB439001B400E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				45421E5D282DBED8001B400E /* Notification.swift */,
-				45421E56282DAF14001B400E /* ViewHome.swift */,
 				44DAB0D0282A910400156A9B /* ContentView.swift */,
-				4461D264283BE55500574C6D /* RealityViewMorning.swift */,
-				4573679D283DA9DF001CE236 /* ModalViewNight.swift */,
-				45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */,
-				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
-				45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */,
-				44D2F5B7283FBEB6000E57BC /* FilteredView.swift */,
 				5817FA73283E61020082B900 /* DreamSignView.swift */,
+				44D2F5B7283FBEB6000E57BC /* FilteredView.swift */,
+				45421E5D282DBED8001B400E /* Notification.swift */,
 				449BD8DC283E6FDB005AC7FC /* HalfModalMorning.swift */,
+				4573679D283DA9DF001CE236 /* ModalViewNight.swift */,
+				44DAB101282AB8C100156A9B /* ModalView_AddDream.swift */,
+				4461D264283BE55500574C6D /* RealityViewMorning.swift */,
+				45C498FB283D7E8500B0AA3C /* RealityViewNight.swift */,
+				45C498FD283D90E300B0AA3C /* TechniqueInfoView.swift */,
+				45421E56282DAF14001B400E /* ViewHome.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
