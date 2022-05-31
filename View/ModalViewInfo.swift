@@ -13,22 +13,19 @@ struct ModalViewInfo: View {
     let layout = [GridItem(.flexible())]
     
     var body: some View {
-//        VStack {
-        LazyVGrid(columns: layout, spacing: 5) {
-            ForEach(infoList, id: \.self) { info in
-                InfoOvalView(info: info)
-                    .padding(.trailing, 10)
-                    .padding(.leading, 10)
-            }
-            .background(.clear)
-            .ignoresSafeArea(.all)
-        }
         
+        ZStack {
+            BackgroundView()
+                .ignoresSafeArea()
+            LazyVGrid(columns: layout, spacing: 10) {
+                ForEach(infoList, id: \.self) { info in
+                    InfoOvalView(info: info)
+                        .padding(.trailing, 20)
+                        .padding(.leading, 20)
+                }
+                
+            }
+        }
     }
 }
 
-//struct InfoModalView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        InfoModalView()
-//    }
-//}

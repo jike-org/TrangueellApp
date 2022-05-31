@@ -124,8 +124,9 @@ struct DreamSignView : View {
                         })
                         .sheet(isPresented: $showInfo) {
                             ModalViewInfo(showInfo: $showInfo)
-                                .background(BackgroundView())
-                                .ignoresSafeArea(.all)
+//                                .background(BackgroundView())
+//                                .edgesIgnoringSafeArea(.all)
+////                                .ignoresSafeArea(.all)
                         }
                         
                         Button(action: {
