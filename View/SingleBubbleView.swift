@@ -112,14 +112,14 @@ struct SingleBubbleView: View {
         .gesture(
             DragGesture()
                 .onChanged { value in
-                    withAnimation(.spring()) {
+                    withAnimation(.easeIn(duration: 1.5)) {
                         offset = value.translation
                         bubble.positionX = Int(value.location.x)
                         bubble.positionY = Int(value.location.y)
                     }
                 }
                 .onEnded { value in
-                    withAnimation(.spring()) {
+                    withAnimation(.easeOut(duration: 0.5)) {
                         offset = value.translation
                         updateBubblePosition(bubble, x: Int(value.location.x), y: Int(value.location.y))
                     }

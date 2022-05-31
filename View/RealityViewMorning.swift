@@ -416,11 +416,11 @@ struct LiquidSwipe : Shape {
 }
 
 
-struct RealityView_Previews: PreviewProvider {
-    static var previews: some View {
-        RealityView()
-    }
-}
+//struct RealityView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RealityView()
+//    }
+//}
 
 
 

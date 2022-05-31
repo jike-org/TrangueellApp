@@ -41,7 +41,7 @@ struct DreamSignView : View {
                         .blendMode(.colorDodge) // The bottom circle is lightened by an amount determined by the top layer
                         .animation (Animation.spring (dampingFraction: 0.5)
                             .repeatForever()
-                            .speed (.random(in: 0.05...0.4))
+                            .speed (1)
                             .delay(.random (in: 0...1)), value: scale)
                         .onShake {
                             
