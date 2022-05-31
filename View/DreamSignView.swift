@@ -81,7 +81,16 @@ struct DreamSignView : View {
                                     .font(.system(size: 25))
                             })
                             .sheet(isPresented: $showInfo) {
+                                ZStack {
                                 ModalViewInfo(showInfo: $showInfo)
+                                    VStack {
+                                        Capsule()
+                                            .fill(Color.white)
+                                            .frame(width: 134, height: 3)
+                                            .padding(10)
+                                        Spacer()
+                                    }
+                                }
                             }
                             
                             Button(action: {
@@ -92,7 +101,16 @@ struct DreamSignView : View {
                                     .font(.system(size: 25))
                             })
                             .sheet(isPresented: $showModal){
-                                ModalAddDream(showModal: $showModal)
+                                ZStack {
+                                    ModalAddDream(showModal: $showModal)
+                                    VStack {
+                                        Capsule()
+                                            .fill(Color.white)
+                                            .frame(width: 134, height: 3)
+                                            .padding(10)
+                                        Spacer()
+                                    }
+                                }
                             }
                             .padding(.leading, 10)
                             .padding(.trailing, 30)
