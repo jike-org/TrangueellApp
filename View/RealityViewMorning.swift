@@ -29,6 +29,8 @@ struct RealityView: View {
     @State var is_Sun : Bool = true
     @State var is_Moon : Bool = false
     
+    @State var is_Morning : Int = 0
+    
     @State var is_Sound : Bool = false
     @State var is_Vibrate : Bool = false
     
@@ -49,6 +51,9 @@ struct RealityView: View {
     @State var technique3: Technique = switchT
     @State var technique4: Technique = mirror
     
+    @State var currentTab = "Day"
+    
+    @Namespace var animation
     
     let data = Array(1...4).map { "Item \($0)" }
     let layout = [
@@ -64,248 +69,256 @@ struct RealityView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Color.black
-                //                .clipShape(LiquidSwipe(offset: offset))
+                
+                Color.black.opacity(0.8)
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [.gray.opacity(0.7), .black]), startPoint: .top, endPoint: .bottom))
                     .ignoresSafeArea()
-                    .overlay(
-                        ZStack{
-                            
-                            Rectangle()
-                            
-                                .frame(width: 100, height: 50)
-                                .foregroundColor(.red)
-                                .cornerRadius(20)
-                            Image(systemName: "sun.max")
-                                .font(.largeTitle)
-                                .foregroundColor(.white)
-                                .padding(.trailing, 30)
-                                .frame(width: 50, height: 50)
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    withAnimation(.spring()) {
-                                        let screen = UIScreen.main.bounds
-                                        offset.width = -screen.height
-                                        if -offset.width > screen.width / 2 {
-                                            offset.width = -screen.height - 300
-                                        }
-                                        showHome.toggle()
-                                    }
-                                    is_Moon = true
-                                    is_Sun = true
-                                }
-                                .disabled(ButtonDisabled)
-                        }
-                            .offset(x: 20, y: 80)
-                            .opacity(offset == .zero ? 1 : 0), alignment: .topTrailing
-                        
-                    )
                 
                 VStack(spacing: 60.0){
-                    Text("Morning Reality Check")
-                        .foregroundColor(.white)
-                    Spacer()
-                    
-                    Circle()
-                        .stroke(.white)
-                        .overlay(
-                            VStack(spacing: 5.0){
-                                Button {
-                                    selectedTechnique = technique1
-                                    technique1 = technique4
-                                    technique4 = selectedTechnique
-                                } label: {
-                                    ZStack{
-                                        Circle()
-                                            .foregroundColor(.blue)
-                                            .frame(width: 75, height: 75)
-                                        Text("\(technique1.title)")
-                                            .foregroundColor(.white)
-                                    }
-                                    .padding(.bottom, 50)
-                                    
-                                }
-                                Spacer()
-                                
-                                ZStack {
-                                    Circle()
-                                        .foregroundColor(.red)
-                                        .frame(width: 150, height: 150)
-                                        .padding(.bottom, 30)
-                                    Text("\(selectedTechnique.title)")
+                    if is_Morning == 0 {
+                        Text("Morning Reality Check")
+                            .foregroundColor(.white)
+                            .bold()
+                    }else{
+                        Text("Night Reality Check")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                    HStack{
+                        Spacer()
+                        Button {
+                            self.is_Morning = 0
+                        } label: {
+                            Group{
+                                HStack{
+                                    Image(systemName: "sun.max.fill")
                                         .foregroundColor(.white)
+                                        .zIndex(1.0)
+                                    Text("Day")
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                        .padding(.vertical, 2)
                                 }
-                                
-                                Spacer()
-                                HStack(spacing: 150.0){
-                                    Spacer()
-                                    Button {
-                                        selectedTechnique = technique2
-                                        technique2 = technique4
-                                        technique4 = selectedTechnique
-                                    } label: {
-                                        ZStack{
-                                            Circle()
-                                                .foregroundColor(.blue)
-                                                .frame(width: 75, height: 75)
-                                            Text("\(technique2.title)")
-                                                .foregroundColor(.white)
-                                        }
-                                    }
-                                    
-                                    
-                                    Button {
-                                        selectedTechnique = technique3
-                                        technique3 = technique4
-                                        technique4 = selectedTechnique
-                                    } label: {
-                                        ZStack{
-                                            Circle()
-                                                .foregroundColor(.blue)
-                                                .frame(width: 75, height: 75)
-                                            Text("\(technique3.title)")
-                                                .foregroundColor(.white)
-                                        }
-                                    }
-                                    Spacer()
-                                    
-                                }
-                                
-                            }
-                        )
-                    
-                    //insert card per bolla
-                    //                            TechniqueView(isPresentedFullScreenCover: $isPresentedFullScreenCover)
-                    //                                .fullScreenCover(isPresented: $isPresentedFullScreenCover) {
-                    //                                    FullScreenModalView()
-                    //                                }
-                    
-                    //                        }.padding(.vertical, 40)
-                    
-                    
-                    Spacer()
-                }.padding(.horizontal, 20)
-                    .toolbar {
-                        ToolbarItem {
-                            Button {
-                                self.showModal_settings.toggle()
-                            } label: {
-                                Label("Add Item", systemImage: "gear")
-                                    .foregroundColor(.white)
-                            }.sheet(isPresented: $showModal_settings){
-                                if is_Moon {
-                                    ModalViewNight(is_Sound: $is_Sound, is_Vibrate: $is_Vibrate, values_slider: $values_slider)
-                                }
-                                else if is_Sun {
-                                    HalfSheet{
-                                        ZStack{
+                                .background(
+                                    ZStack{
+                                        if currentTab == "Day"{
                                             Color.black
-                                                .ignoresSafeArea()
-                                            VStack {
-                                                Capsule()
-                                                    .fill(Color.white)
-                                                    .frame(width: 50, height: 3)
-                                                    .padding(10)
-                                                
-                                                Text("Reality Check Reminder")
-                                                    .foregroundColor(.white)
-                                                    .font(.title)
-                                                HStack{
-                                                    VStack{
-                                                        Text("From")
-                                                            .foregroundColor(.white)
-                                                        Picker("Time", selection: $selectedTime1){
-                                                            ForEach(timer1, id: \.self){
-                                                                Text($0)
-                                                                    .foregroundColor(.white)
-                                                            }
-                                                        }
-                                                        .pickerStyle(.wheel)
-                                                        .frame(width: 20, height: 20, alignment: .center)
-                                                        .foregroundColor(.white)
-                                                    }
-                                                    .padding()
-                                                    Spacer()
-                                                    VStack{
-                                                        Text("To")
-                                                            .foregroundColor(.white)
-                                                        Picker("Time", selection: $selectedTime2){
-                                                            ForEach(timer2, id: \.self){
-                                                                Text($0)
-                                                                    .foregroundColor(.white)
-                                                            }
-                                                        }
-                                                        .pickerStyle(.wheel)
-                                                        .frame(width: 20, height: 20, alignment: .center)
-                                                        .foregroundColor(.white)
-                                                        
-                                                    }
-                                                    .padding()
-                                                }
-                                                Slider(value: $frequency_slider, in: 0...30)
-                                                Spacer()
-                                            }
+                                                .opacity(0.7)
+                                                .cornerRadius(10)
+                                                .matchedGeometryEffect(id: "TAB", in: animation)
+                                                .frame(width: 160)
                                         }
                                     }
-                                    .background(.black)
-                                    .onAppear(){
-                                        ButtonDisabled = true
-                                        selectedTime1 = selectedFrom
-                                        selectedTime2 = selectedTo
-                                        frequency_slider = frequencySlider
+                                )
+                                .onTapGesture {
+                                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6)) {
+                                        currentTab = "Day"
+                                        self.is_Morning = 0
                                     }
-                                    .onDisappear(){
-                                        ButtonDisabled = false
-                                        selectedFrom = selectedTime1
-                                        selectedTo = selectedTime2
-                                        frequencySlider = frequency_slider
+                                }
+                                Spacer()
+                                Spacer()
+                            }
+                        }
+                        .disabled(ButtonDisabled)
+                        
+                        Button {
+                            self.is_Morning = 1
+                        } label: {
+                            Group{
+                                HStack{
+                                    Image(systemName: "moon.stars")
+                                        .foregroundColor(.white)
+                                        .zIndex(1.0)
+                                    Text("Night")
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                        .padding(.vertical, 2)
+                                }
+                                .background(
+                                    ZStack{
+                                        if currentTab == "Night"{
+                                            Color.black
+                                                .opacity(0.7)
+                                                .cornerRadius(10)
+                                                .matchedGeometryEffect(id: "TAB", in: animation)
+                                                .frame(width: 190)
+                                        }
                                     }
+                                )
+                                .onTapGesture {
+                                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6)) {
+                                        currentTab = "Night"
+                                        self.is_Morning = 1
+                                    }
+                                }
+                            }
+                        }
+                        .disabled(ButtonDisabled)
+                        Spacer()
+                    }
+                    .frame(width: UIScreen.main.bounds.width/1.2, height: 30)
+                    .background(Color.white.opacity(0.3))
+                    .cornerRadius(10)
+                    
+                    if is_Morning == 0 {
+                        VStack(spacing: 60.0){
+                            Circle()
+                                .stroke(.white.opacity(0.3))
+                                .overlay(
+                                    VStack(spacing: 5.0){
+                                        Button {
+                                            selectedTechnique = technique1
+                                            technique1 = technique4
+                                            technique4 = selectedTechnique
+                                        } label: {
+                                            ZStack{
+                                                Image("bubble")
+                                                    .resizable()
+                                                    .frame(width: 75, height: 75)
+                                                Text("\(technique1.title)")
+                                                    .foregroundColor(.white)
+                                            }
+                                            .padding(.bottom, 50)
+                                        }
+                                        Spacer()
+                                        
+                                        ZStack{
+                                            Image("bubble")
+                                                .resizable()
+                                                .frame(width: 150, height: 150)
+                                            Text("\(selectedTechnique.title)")
+                                                .foregroundColor(.white)
+                                        }
+                                        
+                                        Spacer()
+                                        HStack(spacing: 150.0){
+                                            Spacer()
+                                            Button {
+                                                selectedTechnique = technique2
+                                                technique2 = technique4
+                                                technique4 = selectedTechnique
+                                            } label: {
+                                                ZStack{
+                                                    Image("bubble")
+                                                        .resizable()
+                                                        .frame(width: 75, height: 75)
+                                                    Text("\(technique2.title)")
+                                                        .foregroundColor(.white)
+                                                }
+                                            }
+                                            Button {
+                                                selectedTechnique = technique3
+                                                technique3 = technique4
+                                                technique4 = selectedTechnique
+                                            } label: {
+                                                ZStack{
+                                                    Image("bubble")
+                                                        .resizable()
+                                                        .frame(width: 75, height: 75)
+                                                    Text("\(technique3.title)")
+                                                        .foregroundColor(.white)
+                                                }
+                                            }
+                                            Spacer()
+                                        }
+                                    }
+                                )
+                        }
+                    }else{
+                        TabView{
+                            ForEach(data, id: \.self){ item in
+                                Text("\(item)")
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .tabViewStyle(.page)
+                        .indexViewStyle(.page(backgroundDisplayMode: .never))
+                        
+                        Spacer()
+                        NavigationLink("Start", destination: AreUDreamingView())
+                    }
+                    Spacer()
+                }
+                .padding(.horizontal, 20)
+                .toolbar {
+                    ToolbarItem{
+                        Button {
+                            self.showModal_settings.toggle()
+                        } label: {
+                            Label("AddItem", systemImage: "gear")
+                                .foregroundColor(.white)
+                        }
+                        .sheet(isPresented: $showModal_settings) {
+                            if is_Morning == 1 {
+                                ModalViewNight(is_Sound: $is_Sound, is_Vibrate: $is_Vibrate, values_slider: $values_slider)
+                            }else{
+                                HalfSheet{
+                                    ZStack{
+                                        Color.black
+                                            .ignoresSafeArea()
+                                        VStack{
+                                            Text("Reality Check Reminder")
+                                                .foregroundColor(.white)
+                                                .font(.title)
+                                            HStack{
+                                                VStack{
+                                                    Text("From")
+                                                        .foregroundColor(.white)
+                                                    Picker("Time", selection: $selectedTime1){
+                                                        ForEach(timer1, id: \.self){
+                                                            Text($0)
+                                                                .foregroundColor(.white)
+                                                        }
+                                                    }
+                                                    .pickerStyle(.wheel)
+                                                    .frame(width: 20, height: 20, alignment: .center)
+                                                    .foregroundColor(.white)
+                                                }
+                                                .padding()
+                                                Spacer()
+                                                VStack{
+                                                    Text("To")
+                                                        .foregroundColor(.white)
+                                                    Picker("Time", selection: $selectedTime2){
+                                                        ForEach(timer2, id: \.self){
+                                                            Text($0)
+                                                                .foregroundColor(.white)
+                                                        }
+                                                    }
+                                                    .pickerStyle(.wheel)
+                                                    .frame(width: 20, height: 20, alignment: .center)
+                                                    .foregroundColor(.white)
+                                                }
+                                                .padding()
+                                            }
+                                            Slider(value: $frequency_slider, in: 0...30)
+                                            Spacer()
+                                        }
+                                    }
+                                }
+                                .background(.black)
+                                .onAppear(){
+                                    ButtonDisabled = true
+                                    selectedTime1 = selectedFrom
+                                    selectedTime2 = selectedTo
+                                    frequency_slider = frequencySlider
+                                }
+                                .onDisappear(){
+                                    ButtonDisabled = false
+                                    selectedFrom = selectedTime1
+                                    selectedTo = selectedTime2
+                                    frequencySlider = frequency_slider
                                 }
                             }
                         }
                     }
-                if showHome {
-                    RealityView2(is_Moon: $is_Moon, is_Sun: $is_Sun)
                 }
             }
-            
-            
-            //                Color.black
-            //                    .clipShape(LiquidSwipe(offset: offset))
-            //                    .ignoresSafeArea()
-            //                    .overlay(
-            //                        Image(systemName: "moon")
-            //                            .font(.largeTitle)
-            //                            .foregroundColor(.black)
-            //                            .frame(width: 50, height: 50)
-            //                            .contentShape(Rectangle())
-            //                            .onTapGesture {
-            //                                withAnimation(.spring()) {
-            //                                    let screen = UIScreen.main.bounds
-            //                                    offset.width = -screen.height
-            //                                    if -offset.width > screen.width / 2 {
-            //                                        offset.width = -screen.height - 300
-            //                                    }
-            //                                    showHome.toggle()
-            //                                }
-            //                            }
-            //                       .offset(x: 10, y: 80)
-            //                            .opacity(offset == .zero ? 1 : 0), alignment: .topLeading
-            //
-            //                    )
-            
-            
-            //                Text("ciaoooo")
-            //                    .foregroundColor(.red)
-            //                    .onTapGesture {
-            //                        withAnimation(.spring()) {
-            //                            offset = .zero
-            //                            showHome.toggle()
-            //                        }
-            //                    }
-            
-        }.navigationBarHidden(true)
-            .background(BackgroundView())
-        
+        }
+        .navigationBarHidden(true)
+        .background(BackgroundView())
     }
 }
 
