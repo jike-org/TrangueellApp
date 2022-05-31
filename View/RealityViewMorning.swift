@@ -111,17 +111,18 @@ struct RealityView: View {
                                         }
                                     }
                                 )
+                                .onTapGesture {
+                                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6)) {
+                                        currentTab = "Day"
+                                        self.is_Morning = 0
+                                    }
+                                }
                                 Spacer()
                                 Spacer()
                             }
                         }
                         .disabled(ButtonDisabled)
-                        .onTapGesture {
-                            withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6)) {
-                                currentTab = "Day"
-                                self.is_Morning = 0
-                            }
-                        }
+                        
                         Button {
                             self.is_Morning = 1
                         } label: {
@@ -142,7 +143,7 @@ struct RealityView: View {
                                                 .opacity(0.7)
                                                 .cornerRadius(10)
                                                 .matchedGeometryEffect(id: "TAB", in: animation)
-                                                .frame(width: 160)
+                                                .frame(width: 190)
                                         }
                                     }
                                 )
@@ -164,7 +165,7 @@ struct RealityView: View {
                     if is_Morning == 0 {
                         VStack(spacing: 60.0){
                             Circle()
-                                .stroke(.white)
+                                .stroke(.white.opacity(0.3))
                                 .overlay(
                                     VStack(spacing: 5.0){
                                         Button {
