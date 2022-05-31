@@ -388,3 +388,156 @@ struct NonModalButton: UIViewRepresentable {
     }
     
 }
+
+struct LiquidSwipe : Shape {
+    
+    var offset : CGSize
+    
+    var animatableData: CGSize.AnimatableData{
+        get{return offset.animatableData}
+        set{offset.animatableData = newValue}
+    }
+    
+    func path(in rect: CGRect) -> Path {
+        return Path { path in
+            
+            let width = rect.width + (-offset.width > 0 ? offset.width : 0)
+            
+            //prima costruzione rettangolo
+            path.move(to: CGPoint(x: 0, y: 0))
+            path.addLine(to: CGPoint(x: rect.width, y: 0 ))
+            path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+            path.addLine(to: CGPoint(x: 0, y: rect.height ))
+            
+            let from = 80 + (offset.width)
+            
+            path.move(to: CGPoint(x: rect.width, y: from > 80 ? 80 : from))
+            
+            //ora costruiamo la forma la forma curva
+            var to = 220 + (offset.height) + (-offset.width)
+            to = to < 180 ? 180 : to
+            
+            let mid : CGFloat = 120 + ((180 - 80) / 2)
+            
+            
+            path.move(to: CGPoint(x: rect.width, y: from))
+            
+            path.addCurve(to: CGPoint(x: rect.width, y: to), control1: CGPoint(x: width - 50, y:  mid), control2: CGPoint(x: width - 50, y: mid))
+        }
+    }
+}
+
+
+//struct RealityView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RealityView()
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//import SwiftUI
+//
+//struct RealityView: View {
+//
+//    @State var currentTab = "☀️"
+//    @Namespace var animation
+//
+//    @State var showModal : Bool = false
+//
+//    var body: some View {
+//
+//        NavigationView{
+//        ZStack{
+//            Color(.black)
+//                .ignoresSafeArea()
+//
+//
+//        HStack{
+//            Text("☀️")
+//                .fontWeight(.bold)
+//                .padding(.vertical, 12)
+//                .padding(.horizontal, 25)
+//                .background(
+//                    ZStack{
+//                        if currentTab == "☀️" {
+//                            Color.blue.opacity(0.7)
+//                                .cornerRadius(10)
+//                                .matchedGeometryEffect(id: "TAB", in: animation)
+//                        }
+//                    }
+//                )
+//                .foregroundColor(currentTab == "☀️" ? .blue : .white)
+//                .onTapGesture {
+//                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6)) {
+//                        currentTab = "☀️"
+//                    }
+//                }
+//
+//            Text("🌙")
+//                .fontWeight(.bold)
+//                .padding(.vertical, 12)
+//                .padding(.horizontal, 25)
+//                .background(
+//                    ZStack{
+//                        if currentTab == "🌙" {
+//                            ZStack{
+//                                Color.blue
+//                                    .opacity(0.3)
+//                                    .cornerRadius(10)
+//                                    .matchedGeometryEffect(id: "TAB", in: animation)
+//                                Color.black
+//                                    .opacity(0.7)
+//                                    .cornerRadius(10)
+//                                    .matchedGeometryEffect(id: "TAB", in: animation)
+//                            }
+//                        }
+//                    }
+//                )
+//                .foregroundColor(currentTab == "🌙" ? .black : .white)
+//                .onTapGesture {
+//                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6)) {
+//                        currentTab = "🌙"
+//                    }
+//                }
+//        }
+//        .padding(.vertical, 7)
+//        .padding(.horizontal, 10)
+//        .background(Color.white.opacity(0.3))
+//        .cornerRadius(10)
+//        }.toolbar {
+//            ToolbarItem {
+//                Button {
+//                    self.showModal.toggle()
+//                } label: {
+//                    Label("Settings", systemImage: "gear")
+//                        .foregroundColor(.white)
+//                }.sheet(isPresented: $showModal){
+//                    Text("ciao")
+//                }
+//            }
+//        }
+//        }
+//
+//        }
+//
+//}

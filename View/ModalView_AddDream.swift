@@ -41,8 +41,6 @@ struct ModalAddDream: View {
                         .foregroundColor(.clear)
                 }
                 Spacer()
-                
-                
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {

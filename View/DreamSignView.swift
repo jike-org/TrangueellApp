@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DreamSignView : View {
+    @State var isDIEmpty = false
     @GestureState var scale: CGFloat = 1.0
     
     @Environment(\.managedObjectContext) private var viewContext
@@ -19,6 +20,7 @@ struct DreamSignView : View {
     
     @State private var showModal = false
     @State private var showInfo = false
+    @State private var showDreamInspiration = false
     
     @State private var showNoFilter = true
     @State private var showFilter = false
@@ -41,7 +43,7 @@ struct DreamSignView : View {
                         .blendMode(.colorDodge) // The bottom circle is lightened by an amount determined by the top layer
                         .animation (Animation.spring (dampingFraction: 0.5)
                             .repeatForever()
-                            .speed (.random(in: 0.05...0.4))
+                            .speed (1)
                             .delay(.random (in: 0...1)), value: scale)
                         .onShake {
                             
@@ -81,7 +83,16 @@ struct DreamSignView : View {
                                     .font(.system(size: 25))
                             })
                             .sheet(isPresented: $showInfo) {
-                                ModalViewInfo(showInfo: $showInfo)
+                                ZStack {
+                                    ModalViewInfo(showInfo: $showInfo)
+                                    VStack {
+                                        Capsule()
+                                            .fill(Color.white)
+                                            .frame(width: 134, height: 3)
+                                            .padding(10)
+                                        Spacer()
+                                    }
+                                }
                             }
                             
                             Button(action: {
@@ -92,7 +103,16 @@ struct DreamSignView : View {
                                     .font(.system(size: 25))
                             })
                             .sheet(isPresented: $showModal){
-                                ModalAddDream(showModal: $showModal)
+                                ZStack {
+                                    ModalAddDream(showModal: $showModal)
+                                    VStack {
+                                        Capsule()
+                                            .fill(Color.white)
+                                            .frame(width: 134, height: 3)
+                                            .padding(10)
+                                        Spacer()
+                                    }
+                                }
                             }
                             .padding(.leading, 10)
                             .padding(.trailing, 30)
@@ -135,10 +155,43 @@ struct DreamSignView : View {
                 }
                 Spacer()
             }
+            VStack {
+                Spacer()
+                
+                Button {
+                    isDIEmpty.toggle()
+                    showDreamInspiration.toggle()
+                } label : {
+                    if isDIEmpty == false {
+                    Image("DSCreationBoxEmpty")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 76, height: 91.56, alignment: .center)
+                        .padding(.bottom, 100)
+                    } else {
+                        Image("DSCreationBoxFull")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 76, height: 91.56, alignment: .center)
+                            .padding(.bottom, 100)
+                    }
+                }.sheet(isPresented: $showDreamInspiration){
+                    ZStack {
+                        BackgroundView()
+                        ModalDreamInspiration(showDreamInspiration: $showDreamInspiration)
+                        VStack {
+                            Capsule()
+                                .fill(Color.white)
+                                .frame(width: 134, height: 3)
+                                .padding(10)
+                            Spacer()
+                        }
+                    }
+                }
+            }
             
         }
         .background(BackgroundView())
-        
         .ignoresSafeArea()
     }
 }

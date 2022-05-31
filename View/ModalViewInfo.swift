@@ -23,8 +23,8 @@ struct ModalViewInfo: View {
                         .padding(.trailing, 20)
                         .padding(.leading, 20)
                 }
-                
             }
+            
         }
     }
 }

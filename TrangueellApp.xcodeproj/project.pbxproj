@@ -38,6 +38,7 @@
 		58BC7C9628454351007706A2 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7C9528454351007706A2 /* BackgroundView.swift */; };
 		58BC7C9828457AB9007706A2 /* InfoOvalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7C9728457AB8007706A2 /* InfoOvalView.swift */; };
 		58BC7C9A28457DC0007706A2 /* ModalViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7C9928457DC0007706A2 /* ModalViewInfo.swift */; };
+		58BC7CAA28465493007706A2 /* ModalDreamInspiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7CA928465493007706A2 /* ModalDreamInspiration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		58BC7C9528454351007706A2 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		58BC7C9728457AB8007706A2 /* InfoOvalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOvalView.swift; sourceTree = "<group>"; };
 		58BC7C9928457DC0007706A2 /* ModalViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewInfo.swift; sourceTree = "<group>"; };
+		58BC7CA928465493007706A2 /* ModalDreamInspiration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDreamInspiration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				45421E56282DAF14001B400E /* ViewHome.swift */,
 				447D4C6428451662009A4B19 /* AreUDreamingView.swift */,
 				58BC7C9528454351007706A2 /* BackgroundView.swift */,
+				58BC7CA928465493007706A2 /* ModalDreamInspiration.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				5820960C28410EC600232EFC /* ShakeGestureRecognizer.swift in Sources */,
 				58BC7C9828457AB9007706A2 /* InfoOvalView.swift in Sources */,
 				44986B3F282E8D49008703D7 /* RandomData.swift in Sources */,
+				58BC7CAA28465493007706A2 /* ModalDreamInspiration.swift in Sources */,
 				44D2F5B8283FBEB6000E57BC /* FilteredView.swift in Sources */,
 				45421E57282DAF14001B400E /* ViewHome.swift in Sources */,
 				4461D265283BE55500574C6D /* RealityViewMorning.swift in Sources */,
