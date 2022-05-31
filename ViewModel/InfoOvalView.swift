@@ -23,6 +23,7 @@ struct InfoOvalView: View {
                     .font(Font.custom("Avenir", size: 18))
                     .foregroundColor(.white)
             }
+            
 //            .padding(10)
         }
     }

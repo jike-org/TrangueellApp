@@ -123,9 +123,11 @@ struct DreamSignView : View {
                                 .font(.system(size: 25))
                         })
                         .sheet(isPresented: $showInfo) {
-                            InfoModalView(showInfo: $showInfo)
+                            ModalViewInfo(showInfo: $showInfo)
+                                .background(BackgroundView())
+                                .ignoresSafeArea(.all)
                         }
-                        .padding(.trailing, 10)
+                        
                         Button(action: {
                             self.showModal.toggle()
                         }, label: {

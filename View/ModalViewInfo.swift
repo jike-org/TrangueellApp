@@ -7,17 +7,23 @@
 
 import SwiftUI
 
-struct InfoModalView: View {
+struct ModalViewInfo: View {
+    
     @Binding var showInfo : Bool
+    let layout = [GridItem(.flexible())]
+    
     var body: some View {
-        VStack {
+//        VStack {
+        LazyVGrid(columns: layout, spacing: 5) {
             ForEach(infoList, id: \.self) { info in
                 InfoOvalView(info: info)
-                //                .padding(15)
+                    .padding(.trailing, 10)
+                    .padding(.leading, 10)
             }
+            .background(.clear)
+            .ignoresSafeArea(.all)
         }
-//        .padding()
-            .background(BackgroundView())
+        
     }
 }
 
