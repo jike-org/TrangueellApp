@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DreamSignView : View {
+    @State var isDIEmpty = false
     @GestureState var scale: CGFloat = 1.0
     
     @Environment(\.managedObjectContext) private var viewContext
@@ -19,6 +20,7 @@ struct DreamSignView : View {
     
     @State private var showModal = false
     @State private var showInfo = false
+    @State private var showDreamInspiration = false
     
     @State private var showNoFilter = true
     @State private var showFilter = false
@@ -82,7 +84,7 @@ struct DreamSignView : View {
                             })
                             .sheet(isPresented: $showInfo) {
                                 ZStack {
-                                ModalViewInfo(showInfo: $showInfo)
+                                    ModalViewInfo(showInfo: $showInfo)
                                     VStack {
                                         Capsule()
                                             .fill(Color.white)
@@ -153,10 +155,43 @@ struct DreamSignView : View {
                 }
                 Spacer()
             }
+            VStack {
+                Spacer()
+                
+                Button {
+                    isDIEmpty.toggle()
+                    showDreamInspiration.toggle()
+                } label : {
+                    if isDIEmpty == false {
+                    Image("DSCreationBoxEmpty")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 76, height: 91.56, alignment: .center)
+                        .padding(.bottom, 100)
+                    } else {
+                        Image("DSCreationBoxFull")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 76, height: 91.56, alignment: .center)
+                            .padding(.bottom, 100)
+                    }
+                }.sheet(isPresented: $showDreamInspiration){
+                    ZStack {
+                        BackgroundView()
+                        ModalDreamInspiration(showDreamInspiration: $showDreamInspiration)
+                        VStack {
+                            Capsule()
+                                .fill(Color.white)
+                                .frame(width: 134, height: 3)
+                                .padding(10)
+                            Spacer()
+                        }
+                    }
+                }
+            }
             
         }
         .background(BackgroundView())
-        
         .ignoresSafeArea()
     }
 }
