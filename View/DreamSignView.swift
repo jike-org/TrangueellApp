@@ -17,7 +17,6 @@ struct DreamSignView : View {
         animation: .default)
     private var dreams: FetchedResults<DreamElement>
     
-    
     @State private var showModal = false
     @State private var showInfo = false
     
@@ -28,13 +27,11 @@ struct DreamSignView : View {
     
     @State private var showButtons = false
     
-    
-    
     let darkBlue = Color(red: 0.11, green: 0.11, blue: 0.39)
     let bubbleColor = Color (red: 0.65, green: 1.05, blue: 2.25)
+    
     var body: some View {
         
-        //        VStack {
         ZStack {
             if showFilter == false && showNoFilter == true{
                 ForEach (dreams) { bubble in
@@ -51,16 +48,13 @@ struct DreamSignView : View {
                             print("Device shaken")
                         }
                 }
-                
             }
             if showFilter == true && showNoFilter == false {
                 FilteredView(filter: filteredCategory)
             }
-            
-            
             VStack {
-                HStack {
-                    VStack{
+                VStack{
+                    HStack {
                         Button {
                             if showButtons == false{
                                 showButtons = true
@@ -69,7 +63,6 @@ struct DreamSignView : View {
                                 showNoFilter = true
                                 showFilter = false
                             }
-                            
                         } label: {
                             Image("filterIcon")
                                 .foregroundColor(.white)
@@ -77,94 +70,76 @@ struct DreamSignView : View {
                         }
                         .padding(.top, 45)
                         .padding(.leading, 30)
-                        if showButtons == true{
-                            
-                            ForEach(categories, id:\.self){ category in
-                                ZStack {
-                                    
-                                    //                                    Rectangle()
-                                    //                                        .frame(width: 3, height: 40)
-                                    //                                        .foregroundColor(Color.filterLine)
-                                    //                                        .padding(.leading, 30)
-                                    
-                                    Button {
-                                        if showNoFilter == true{
-                                            showFilter = true
-                                            showNoFilter = false
-                                            filteredCategory = category
-                                        } else if showNoFilter == false{
-                                            showFilter = false
-                                            showFilter = true
-                                            filteredCategory = category
-                                        }
-                                    } label: {
-                                        Image(category.icon)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 40)
-                                            .foregroundColor(.white)
-                                            .padding(.leading, 30)
-                                    }
-                                }
+                        
+                        Spacer()
+                        Group {
+                            Button(action: {
+                                self.showInfo.toggle()
+                            }, label: {
+                                Image(systemName: "info.circle")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 25))
+                            })
+                            .sheet(isPresented: $showInfo) {
+                                ModalViewInfo(showInfo: $showInfo)
                             }
                             
-                            
+                            Button(action: {
+                                self.showModal.toggle()
+                            }, label: {
+                                Image(systemName: "plus")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 25))
+                            })
+                            .sheet(isPresented: $showModal){
+                                ModalAddDream(showModal: $showModal)
+                            }
+                            .padding(.leading, 10)
+                            .padding(.trailing, 30)
                         }
+                        .padding(.top, 45)
                     }
-                    //                        .padding(.trailing, 30)
-                    
-                    Spacer()
-                    Group {
-                        Button(action: {
-                            self.showInfo.toggle()
-                        }, label: {
-                            Image(systemName: "info.circle")
-                                .foregroundColor(.white)
-                                .font(.system(size: 25))
-                        })
-                        .sheet(isPresented: $showInfo) {
-                            ModalViewInfo(showInfo: $showInfo)
-//                                .background(BackgroundView())
-//                                .edgesIgnoringSafeArea(.all)
-////                                .ignoresSafeArea(.all)
-                        }
+                    if showButtons == true{
                         
-                        Button(action: {
-                            self.showModal.toggle()
-                        }, label: {
-                            Image(systemName: "plus")
-                                .foregroundColor(.white)
-                                .font(.system(size: 25))
-                        })
-                        .sheet(isPresented: $showModal){
-                            ModalAddDream(showModal: $showModal)
+                        ForEach(categories, id:\.self){ category in
+                            HStack {
+                                
+                                //                                    Rectangle()
+                                //                                        .frame(width: 3, height: 40)
+                                //                                        .foregroundColor(Color.filterLine)
+                                //                                        .padding(.leading, 30)
+                                
+                                Button {
+                                    if showNoFilter == true{
+                                        showFilter = true
+                                        showNoFilter = false
+                                        filteredCategory = category
+                                    } else if showNoFilter == false{
+                                        showFilter = false
+                                        showFilter = true
+                                        filteredCategory = category
+                                    }
+                                } label: {
+                                    Image(category.icon)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 40)
+                                        .foregroundColor(.white)
+                                        .padding(.leading, 33)
+                                }
+                                Spacer()
+                            }
                         }
-                        .padding(.trailing, 30)
+                        .drawingGroup(opaque: false, colorMode: .linear)
                     }
-                    .padding(.top, 45)
                 }
                 Spacer()
             }
             
-            
         }
-        
-        
-        .drawingGroup(opaque: false, colorMode: .linear)
-        
         .background(BackgroundView())
         
         .ignoresSafeArea()
-        
-        //        }
-        
     }
-    
-    
 }
 
-//struct DreamSignView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DreamSignView()
-//    }
-//}
