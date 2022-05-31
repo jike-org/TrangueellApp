@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="45px" viewBox="0 0 41 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>SUNMOON Copy</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SUNMOON-Copy" transform="translate(0.500000, 0.857695)">
+            <g id="Group-13" transform="translate(24.500000, 21.642305) scale(-1, 1) translate(-24.500000, -21.642305) translate(9.500000, 6.142305)" fill="#191A22" fill-opacity="0" stroke="#FFFFFF">
+                <ellipse id="Oval" cx="15" cy="15.5" rx="14.5" ry="15"></ellipse>
+            </g>
+            <path d="M21.1383892,6.24766965 C20.5645719,6.24766965 17.6231553,5.94794968 14.651877,9.43589443 C11.6411924,12.9700978 10.50449,16.1049455 10.50449,20.1928679 C10.50449,24.2807903 11.2212578,26.9824339 14.3046928,30.1252301 C15.8713937,31.7220926 18.0936088,33.0534178 20.9713382,34.1192059 C24.0136806,33.3734569 26.026029,32.615983 27.0083833,31.8467841 C30.668557,28.9808105 32.50449,24.9419511 32.50449,20.5319382 C32.50449,16.2376802 30.8845553,12.3545579 27.5990876,9.52938473 C26.1521913,8.2851988 22.7435397,6.24766965 21.1383892,6.24766965 Z" id="Path-21" stroke="#FFFFFF" stroke-width="0.3" fill="#FFFFFF" transform="translate(21.504490, 20.180215) rotate(22.000000) translate(-21.504490, -20.180215) "></path>
+            <g id="Group-14-Copy" transform="translate(8.500000, 6.142305)" stroke="#FFFFFF">
+                <circle id="Oval" cx="15.5" cy="15.5" r="15"></circle>
+            </g>
+            <line x1="7.51389991" y1="21.6423048" x2="0" y2="21.6423048" id="Path" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round"></line>
+            <line x1="10.082444" y1="12.0884124" x2="4.61251666" y2="12.0041416" id="Path" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round" transform="translate(7.347480, 12.046277) rotate(210.000000) translate(-7.347480, -12.046277) "></line>
+            <line x1="18.0908108" y1="39.6285899" x2="10.0335336" y2="39.5180784" id="Path" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round" transform="translate(14.062172, 39.573334) rotate(120.000000) translate(-14.062172, -39.573334) "></line>
+            <line x1="18.0666915" y1="3.75260597" x2="9.9777695" y2="3.75260597" id="Path" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round" transform="translate(14.022230, 3.752606) rotate(240.000000) translate(-14.022230, -3.752606) "></line>
+            <line x1="10.5446579" y1="31.9736249" x2="4.55287856" y2="32.1566182" id="Path" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round" transform="translate(7.548768, 32.065122) rotate(150.000000) translate(-7.548768, -32.065122) "></line>
+            <circle id="Oval" cx="24" cy="21.6423048" r="16.5"></circle>
+        </g>
+    </g>
+</svg>

@@ -36,7 +36,8 @@ struct ContentView: View {
                         Text("")
                         Image("realityCheckTab").renderingMode(.template)
                     }
-            }.accentColor(.white)
+            }
+            .accentColor(.white)
         }
         .background(BackgroundView())
     }

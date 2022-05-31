@@ -35,9 +35,3 @@ struct ModalDreamInspiration: View {
         .ignoresSafeArea(.all)
     }
 }
-
-//struct ModalDreamInspiration_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ModalDreamInspiration()
-//    }
-//}

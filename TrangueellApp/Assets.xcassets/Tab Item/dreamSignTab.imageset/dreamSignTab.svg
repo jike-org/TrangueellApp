@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="32px" viewBox="0 0 37 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 14 Copy 11</title>
+    <defs>
+        <filter x="-11.8%" y="-10.6%" width="123.7%" height="121.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0.4" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DS-screen-Copy-18" transform="translate(-83.000000, -818.000000)">
+            <g id="Group-14-Copy-11" transform="translate(85.831276, 818.339070)">
+                <g id="Group-9-Copy" transform="translate(16.097117, 15.762897) scale(-1, -1) rotate(-1.000000) translate(-16.097117, -15.762897) translate(0.248357, 1.394076)" fill="#FFFFFF">
+                    <g id="Group-9" transform="translate(20.510486, 17.758160) rotate(-42.000000) translate(-20.510486, -17.758160) translate(11.260574, 11.312468)">
+                        <path d="M7.49217694,12.0962374 C7.74582552,12.0962374 9.16054552,9.0012481 11.6408907,6.56568953 C14.0842719,4.16642752 17.5956953,2.42796984 17.5956953,2.17810133 C17.5956953,1.90402733 16.1987519,0.0267912655 14.4274447,1.15015666 C12.9445816,2.09059039 11.4903461,3.62016917 11.3477333,3.8621382 C11.2272955,4.06648328 10.350069,4.95578267 9.67576771,5.99984221 C8.59784819,7.66884713 7.18242665,12.0962374 7.49217694,12.0962374 Z" id="Oval-Copy-7" filter="url(#filter-1)" transform="translate(12.522267, 6.445692) scale(-1, -1) rotate(10.000000) translate(-12.522267, -6.445692) "></path>
+                        <path d="M0.0108009756,10.8059345 L0.615480983,11.8759361 C1.79156589,11.5946035 2.70140764,11.4090816 3.34500623,11.3193703 C3.98860482,11.229659 5.01568223,11.2933861 6.42623847,11.5105514 C4.92692492,10.944205 3.82594537,10.6389945 3.12329982,10.5949199 C2.42065427,10.5508453 1.38315466,10.6211835 0.0108009756,10.8059345 Z" id="Path-26" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.218520, 11.229061) scale(-1, -1) rotate(1.000000) translate(-3.218520, -11.229061) "></path>
+                    </g>
+                </g>
+                <circle id="Oval" stroke="#FFFFFF" cx="18.6687242" cy="15.5" r="15"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
